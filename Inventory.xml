@@ -418,7 +418,8 @@ body{font-size:14px;font-weight:400;line-height:32px;letter-spacing:1px;color:#1
 html,body{height:100%}
 h1,h2,h3,h4,h5,h6{font-size:14px;font-weight:400;font-family:'Playfair Display',serif;letter-spacing:3px}
 a{text-decoration:none;-webkit-transition:all .4s;transition:all .2s}
-a:hover{color:#fff;text-decoration:none}
+/*KALIU 20170924b: change link HL color from white to black */
+a:hover{color:#000000;text-decoration:none}
 a:focus{outline:none;text-decoration:none}
 /* KALIU 20170916f: img auto scale */
 img {
@@ -637,10 +638,10 @@ p#ContactForm1_contact-form-error-message{position:absolute;padding:1px 20px;bor
 p#ContactForm1_contact-form-error-message img,p#ContactForm1_contact-form-success-message img{width:12px;margin-top:-3px}
 form#contactForm{position:relative}
 p#ContactForm1_contact-form-success-message{position:absolute;padding:1px 20px;border-radius:4px;left:0;color:#64e233;text-transform:uppercase;width:100%}
-hKALIU {font-size:0.1%;margin:.0em 0}
+hKALIU {font-size:1px;margin:.0em 0}
 .contactFooter{background-color:#222222;padding:20px 0 0px;color:#fdfdfd}
-.footerLeft{font-size:14px;color:#777777;font-family:Open Sans;text-transform:capitalize;font-weight:100;text-align:center}
-.footerLeft a{color:rgb(255,255,255);font-weight:500;font-family:Open Sans}
+.footerLeft{font-size:1px;color:#777777;font-family:Open Sans;text-transform:capitalize;font-weight:10;text-align:center}
+.footerLeft a{color:rgb(255,255,255);font-weight:50;font-family:Open Sans}
 .home-link{display:none}
 .showpageOf{display:none}
 .showpageNum a,.showpage a{margin:0 4px}
@@ -2428,7 +2429,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
  
 <!-- KALIU 20170916d: 刪除首頁跑馬 -->
 <!-- KALIU 20170924a: 加showaddelement -->
- <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
+ <b:section class='single-testimonial' id='crosscol' maxwidgets='2' showaddelement='yes'/>
   <section class='section nopaddingbottom' id='contact'>
 <!-- KALIU 20170916c: 刪除右下寄email -->
 
@@ -2445,10 +2446,10 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
     <div class='container'>
       <!-- COPYRIGHT -->
 	  
-      <div class='col-md-12 col-sm-12 col-xs-12 footerLeft'><hKALIU>
+      <div class='footerLeft hKALIU'>
         Copyright &#169; 2016 <data:blog.title/>. <a href='http://www.protemplateslab.com' rel='dofollow' target='_blank' title='Blogger Templates'>Blog Templates</a> - Design By <a  href='http://www.templateclue.com/' id='templateclue' ref='dofollow' title='Blogger Templates'>Templateclue</a> &amp; <a href='https://businesscardmockups.com/' rel='dofollow' target='_blank' title='Business Card Mockups'>Business Card</a>
 	
-      </hKALIU></div>
+      </div>
       <!-- SOCIAL ICONS -->
 
     </div>
