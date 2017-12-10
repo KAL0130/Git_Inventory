@@ -2,8 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-	<!--KALIU:「Google Analytics (分析)」方法驗證 -->
-	<meta name="google-site-verification" content="wyQzhyMHrCZZwNsIRpsOSXnBwxvf8SSjPMxAtXuiNWY" />
+
   <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
   <b:include data='blog' name='all-head-content'/>
 
@@ -826,6 +825,128 @@ a.about-button{margin-top:0}
 .date-outer .item figcaption::before{border:0!important}
 .some_stats_section .items .item{transform:scale(1)!important}
 }
+
+/* KALIU 20170924c_create multi-level menu: first and secondary menu */
+.ve-menu ul {
+  font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ve-menu a {
+  float: left;
+  display: inline-block;
+  /*overflow: hidden;*/
+  width: 100%;
+  text-align: center;
+  /*white-space: nowrap;*/
+  text-decoration: none;
+  /*text-overflow: ellipsis;*/
+  color: #fff;
+}
+
+
+/* 一级菜单 */
+
+.ve-menu > .ve-menu-pc > li {
+  /*line-height: 40px;*/
+  position: relative;
+  float: left;
+  /*height: 40px;*/
+  cursor: pointer;
+}
+
+.ve-menu > .ve-menu-pc > li:hover ul {
+  display: block;
+}
+
+
+/* 二级菜单 */
+
+.ve-menu > .ve-menu-pc > li > ul {
+  position: absolute;
+  /*top: 40px;*/
+  left: 0;
+  display: none;
+}
+
+.ve-menu > .ve-menu-pc > li > ul > li {
+  height: 40px;
+}
+
+/* 移动端下的菜单 */
+
+/* 菜单按钮 */
+.ve-menu-icon {
+  float: right;
+  width: 20px;
+  height: 21px;
+  margin-right: 10px;
+  overflow: hidden;
+  /* 垂直居中用js动态计算 */
+}
+
+.ve-menu-icon > div {
+  width: 100%;
+  height: 3px;
+  margin-top: 3px;
+  /*background: #000;*/
+  border-radius: 3px;
+}
+
+.ve-menu-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  /*background: #000;*/   
+}
+
+/* 一级菜单 */
+.ve-menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*color: #fff;*/
+  overflow: hidden;
+}
+
+.ve-menu-mobile li {
+  width: 100%;
+  /*color: #fff;*/
+}
+
+.ve-menu-mobile li a {
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* 二级菜单 */
+.ve-menu-mobile ul {
+  display: none;
+}
+
+.ve-menu-mobile  ul li a {
+  /*background: #222;*/
+}
+
+.ve-menu-close {
+  overflow: hidden;
+}
+
+.ve-menu-close > div {
+  float: right;
+  padding: 0 10px;
+}
+
+.ve-menu-close > div:after {
+  font-size: 35px;
+  content: '\00d7';
+}
+/* KALIU 20170924c_create multi-level menu: first and secondary menu */
 ]]></b:skin>
 
 <!-- KAliu mark: 用if讓首頁沒有side bar -->
@@ -901,14 +1022,7 @@ var _0x1305=["\x20","\x6A\x6F\x69\x6E","\x73\x6C\x69\x63\x65","\x73\x70\x6C\x69\
 <!--<body>-->
 <body>
 
-  <!-- START PRELOADER AREA-->
-  <div class='preloader-area'>
-    <div class='preloader'>
-      <div class='double-bounce1'/>
-      <div class='double-bounce2'/>
-    </div>
-  </div>
-  <!-- END PRELOADER AREA -->
+
 
   <!-- HEADER DESIGN AREA -->
 
@@ -1063,6 +1177,7 @@ user is not using shrink to fit then we expand the header.
         <div class='col-md-9 col-sm-10'>
           <div class='mainmenu'>
             <div class='navbar navbar-nobg'>
+			
               <div class='navbar-header'>
                 <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
                   <span class='sr-only'>Toggle navigation</span>
@@ -1071,16 +1186,37 @@ user is not using shrink to fit then we expand the header.
                   <span class='icon-bar'/>
                 </button>
               </div>
-
-              <div class='navbar-collapse collapse'>
-                <ul class='nav navbar-nav'>
-				 <!-- Top Nav -->
-                  <li class='active'><a class='smoth-scroll' href='/'>Home <div class='ripple-wrapper'/></a></li>
-                  <li><a class='smoth-scroll' href='/search/label/2017_俄羅斯Russia'>俄羅斯</a></li>
-                  <li><a class='smoth-scroll' href='/search/label/2017_芬蘭Finland'>芬蘭</a></li>
-                  <li><a class='smoth-scroll' href='/#contact'>About us</a></li>
-                </ul>
-              </div>
+			
+			<!--kaliu
+				<div class="ve-menu">
+					  <ul class="ve-menu-pc">
+						<li><a href="#">Home1</a></li>
+						<li><a href="#">Categories</a>
+						  <ul>
+							<li><a href="#">HTML5</a></li>
+							<li><a href="#">CSS3</a></li>
+							<li><a href="#">JavaScript</a></li>
+						  </ul>
+						</li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">About</a></li>
+					  </ul>
+				</div>
+				-->
+				<div class='navbar-collapse collapse'>
+					<ul class='nav navbar-nav'>
+						
+						<li class='active'><a class='smoth-scroll' href='#home'>Home <div class='ripple-wrapper'/></a></li>
+						<li><a class='smoth-scroll' href='/#about'>About me</a></li>
+						<li><a class='smoth-scroll' href='/#experience'>experience</a></li>
+						<li><a class='smoth-scroll' href='/#service'>Service</a></li>
+						<li><a class='smoth-scroll' href='/#work'>Portfolio</a></li>
+						<li><a class='smoth-scroll' href='/#testimonial'>Testimonial</a></li>
+						<li><a class='smoth-scroll' href='/#contact'>Contact</a></li>
+					</ul>
+				</div>
+				
             </div>
           </div>
         </div>
@@ -3168,5 +3304,351 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 //]]></script>
 
 
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+<script language='javascript' type='text/javascript'>//<![CDATA[
+/**
+ * @author zhangsilei 响应式头部菜单导航
+ * @description 代码优化，
+ */
+;
+(function($, w) {
+
+    // 页面元素
+    var $firstMenu = $('.ve-menu-pc'),
+        $firstLinks = $firstMenu.children('li').children('a'),
+        $sencondLinks = $firstMenu.find('ul').find('a'),
+        hasSecond = $firstMenu.find('ul').length;
+
+    // 菜单类构造方法
+    var Menu = function(options) {
+        // 自带主题: dark(黑底白字)、blue(蓝底白字)
+        this.themeColor = {
+            blue: {
+                fontColor: '#fff',
+                bgColor: '#0E90D2',
+                hoverFontColor: '#fff',
+                hoverBgColor: '#0C79B1'
+            },
+            dark: {
+                fontColor: '#9D9D9D',
+                bgColor: '#1F1F1F',
+                hoverFontColor: '#fff',
+                hoverBgColor: '#000'
+            }
+        };
+        this.defaults = {
+            firstFontSize: '16px',
+            firstFontColor: this.themeColor.blue.fontColor,
+            firstBgColor: this.themeColor.blue.bgColor,
+            firstHoverFontColor: this.themeColor.blue.hoverFontColor,
+            firstHoverBgColor: this.themeColor.blue.hoverBgColor,
+
+            secondFontSize: '16px',
+            secondFontColor: this.themeColor.blue.fontColor,
+            secondBgColor: this.themeColor.blue.bgColor,
+            secondHoverFontColor: this.themeColor.blue.hoverFontColor,
+            secondHoverBgColor: this.themeColor.blue.hoverBgColor,
+
+            height: 40,
+            itemWidth: 20,
+            itemMargin: 1,
+            theme: 'blue',
+            menuIconColor: '#000',
+            menuMaskColor: '#000',
+            mFirstBgColor: '#000',
+            mFirstFontColor: '#fff',
+            mSecondBgColor: '#222',
+            mSecondFontColor: '#fff',
+            closeIconColor: '#fff',
+
+            animate: false,
+            speed: 200
+        };
+        this.settings = $.extend({}, this.defaults, options);
+        this.isMobile = !!navigator.userAgent.match(/AppleWebKit.*Mobile.*/);;
+    }
+
+    // 原型链上加属性和方法
+    Menu.prototype = {
+        setDefaultTheme: function() {
+            var _this = this;
+            // 设置默认主题
+            switch (_this.settings.theme) {
+                case 'blue':
+                    setThemeColor(_this.themeColor.blue.fontColor, _this.themeColor.blue.bgColor);
+                    !_this.isMobile && setHoverBgColor(_this.themeColor.blue.hoverFontColor, _this.themeColor.blue.hoverBgColor);
+                    break;
+                case 'dark':
+                    setThemeColor(_this.themeColor.dark.fontColor, _this.themeColor.dark.bgColor);
+                    !_this.isMobile && setHoverBgColor(_this.themeColor.dark.hoverFontColor, _this.themeColor.dark.hoverBgColor);
+                    break;
+            };
+            // 设置默认主题颜色
+            function setThemeColor(fontColor, bgColor) {
+                $firstLinks.css({
+                    color: fontColor,
+                    backgroundColor: bgColor
+                });
+                $sencondLinks.css({
+                    color: fontColor,
+                    backgroundColor: bgColor
+                });
+            }
+            // 设置鼠标滑过背景颜色
+            function setHoverBgColor(fontColor, bgColor) {
+                var normalFontColor, normalBgColor;
+                $firstMenu.find('a').hover(function() {
+                    var $this = $(this),
+                        normalFontColor = $this.css('color');
+                    normalBgColor = $this.css('backgroundColor');
+                    $this.css({
+                        color: fontColor,
+                        backgroundColor: bgColor
+                    });
+                }, function() {
+                    $(this).css({
+                        color: normalFontColor,
+                        backgroundColor: normalBgColor
+                    });
+                });
+            }
+            return _this;
+        },
+        setFirstMenu: function() {
+            var _this = this;
+            $firstLinks.css({
+                height: _this.settings.height,
+                lineHeight: _this.settings.height + 'px',
+                fontSize: _this.settings.firstFontSize,
+                color: _this.settings.firstFontColor,
+                backgroundColor: _this.settings.firstBgColor
+            }).parent('li').each(function(index, el) {
+                var $this = $(this);
+                $this.width($this.width() + _this.settings.itemWidth); // 一级菜单宽度
+            }).not($firstMenu.children('li').first()).css({
+                marginLeft: this.settings.itemMargin + 'px' // 菜单间隙
+            });
+            return _this;
+        },
+        setSecondMenu: function() {
+            var _this = this;
+            if (hasSecond) {
+                $sencondLinks.css({
+                    height: _this.settings.height,
+                    lineHeight: _this.settings.height + 'px',
+                    fontSize: _this.settings.secondFontSize,
+                    color: _this.settings.secondFontColor,
+                    backgroundColor: _this.settings.secondBgColor
+                });
+                // 二级菜单宽度
+                $.each($firstLinks, function(index, val) {
+                    var $secondMenu = $(this).next('ul');
+                    $secondMenu.css('top', _this.settings.height);
+                    if ($secondMenu.width() + _this.settings.itemWidth < $firstLinks.width()) {
+                        $secondMenu.width($firstLinks.width());
+                    } else {
+                        $secondMenu.width($secondMenu.width() + _this.settings.itemWidth);
+                    }
+                });
+            }
+            return _this;
+        },
+        setHoverCss: function() {
+            var _this = this;
+            // 一级菜单样式
+            $firstLinks.hover(function() {
+                $(this).css({
+                    color: _this.settings.firstHoverFontColor,
+                    backgroundColor: _this.settings.firstHoverBgColor
+                })
+            }, function() {
+                $(this).css({
+                    color: _this.settings.firstFontColor,
+                    backgroundColor: _this.settings.firstBgColor
+                })
+            });
+            // 二级菜单样式
+            $sencondLinks.hover(function() {
+                var $this = $(this);
+                $this.css({
+                    color: _this.settings.secondHoverFontColor,
+                    backgroundColor: _this.settings.secondHoverBgColor
+                });
+                $this.parents('ul').first().prev().css({
+                    color: _this.settings.firstHoverFontColor,
+                    backgroundColor: _this.settings.firstHoverBgColor
+                });
+            }, function() {
+                var $this = $(this);
+                $this.css({
+                    color: _this.settings.secondFontColor,
+                    backgroundColor: _this.settings.secondBgColor
+                });
+                $this.parents('ul').first().prev().css({
+                    color: _this.settings.firstFontColor,
+                    backgroundColor: _this.settings.firstBgColor
+                });
+            });
+        },
+        responsiveLayout: function() {
+            var _this = this,
+                screenWidth = $(w).width(),
+                $menuIcon = $('.ve-menu-icon'),
+                animate = _this.settings.animate;
+            if (screenWidth <= 768) {
+                if (!$menuIcon.length) {
+                    // 隐藏原菜单
+                    $firstMenu.hide();
+                    // 添加菜单按钮
+                    $firstMenu.after('<div class="ve-menu-icon"><div></div><div></div><div></div></div>');
+                    $menuIcon = $('.ve-menu-icon');
+                    $menuIcon.css('marginTop', 10)
+                        .on('click', function() {
+                            // 创建遮罩和一、二级菜单
+                            if (!$('.ve-menu-mask').length && !$('.ve-menu-mobile').length) {
+                                $('<div class="ve-menu-mask"></div>')
+                                    .css('background', _this.settings.menuMaskColor).appendTo('.ve-menu')
+                                    .after('<ul class="ve-menu-mobile"><li class="ve-menu-close"><div></div></li>' + $firstMenu.html() + '</ul>')
+                                    .next().find('ul, li, a')
+                                    .removeAttr('style');
+                            }
+
+                            // TODO 将动画速度设为插件的参数
+                            // 动画显示一级菜单和遮罩层
+                            if (animate) {
+                                _this.animate($('.ve-menu-mask'), animate, _this.settings.speed, 'open');
+                                _this.animate($('.ve-menu-mobile'), animate, _this.settings.speed, 'open');
+                            } else {
+                                $('.ve-menu-mask').show();
+                                $('.ve-menu-mobile').show();
+                            }
+
+                            // 二级菜单样式
+                            $('.ve-menu-mobile > li').not('.ve-menu-close')
+                                .find('ul').find('a')
+                                .css({ //  二级菜单样式
+                                    background: _this.settings.mSecondBgColor,
+                                    color: _this.settings.mSecondFontColor
+                                });
+
+                            // 一级菜单点击事件，每次打开一级菜单时重新绑定，防止重复
+                            $('.ve-menu-mobile > li').not('.ve-menu-close')
+                                .unbind('click')
+                                .on('click', function(e) {
+                                    // 暂时不支持自定义动画，默认为toggle动效
+                                    // TODO 添加自定义动画
+                                    // 二级菜单动画
+                                    if (animate) {
+                                        $(this).find('ul').toggle(150);
+                                    } else {
+                                        $(this).find('ul').toggle();
+                                    }
+                                });
+
+                            // 关闭按钮样式、点击事件
+                            $('.ve-menu-close').css('color', _this.settings.closeIconColor)
+                                .children('div')
+                                .on('click', function() {
+                                    // 动画结束
+                                    if (animate) {
+                                        _this.animate($('.ve-menu-mask'), animate, _this.settings.speed, 'close');
+                                        _this.animate($('.ve-menu-mobile'), animate, _this.settings.speed, 'close');
+                                    } else {
+                                        $('.ve-menu-mask').hide();
+                                        $('.ve-menu-mobile').hide();
+                                    }
+                                });
+                        })
+                        .children('div')
+                        .css('background', _this.settings.menuIconColor);
+                } else {
+                    $firstMenu.hide();
+                    $menuIcon.show();
+                }
+            } else {
+                if ($menuIcon.length) {
+                    $firstMenu.show();
+                    $menuIcon.hide();
+                }
+            }
+
+            return _this;
+        },
+        supportFastClick: function() {
+            if (this.isMobile) { // 在移动端打开页面，将事件触发改为click
+                try {
+                    if (FastClick) {
+                        FastClick.attach(document.body); // 支持fastclick
+                    }
+                } catch (e) {
+                    console.log('fastclick.js is not found.You are still using normal \'click\'');
+                }
+            } else { // 在PC端打开页面，事件触发仍为hover
+                // if (hasSecond) {
+                this.setHoverCss();
+                // }
+            }
+            return this;
+        },
+        animate: function($ele, type, speed, openOrClose) {
+            var startStyle = {},
+                endStyle = {};
+
+            switch (type) {
+                case 'fade':
+                    if (openOrClose == 'open') {
+                        $ele.hide();
+                        $ele.fadeIn(speed);
+                    } else if (openOrClose == 'close') {
+                        $ele.fadeOut(speed);
+                    }
+                    // $ele.css('opacity', 0);
+                    // startStyle.opacity = 1;
+                    // endStyle.opacity = 0;
+                    break;
+                case 'slide':
+                    $ele.stop(true, true);
+                    if (openOrClose == 'open') {
+                        startStyle.height = 0;
+                        endStyle.height = '100%';
+                    } else if (openOrClose == 'close') {
+                        startStyle.height = '100%';
+                        endStyle.height = 0;
+                    }
+                    $ele.css(startStyle).animate(endStyle, speed);
+                    break;
+            }
+        }
+    }
+
+    // 将插件挂到jQuery下并初始化
+    $.fn.menu = function(options) {
+        var menu = new Menu(options);
+        menu.setDefaultTheme()
+            .setFirstMenu()
+            .setSecondMenu()
+            .responsiveLayout()
+            .supportFastClick();
+        $(window).resize(function(event) {
+            menu.responsiveLayout()
+        });
+        return this;
+    }
+
+})(jQuery, window)
+
+//]]></script>
+    <script>
+    $(function() {
+        $('.ve-menu').menu({
+            itemWidth: 30,
+            itemMargin: 0,
+            animate: 'slide'
+        });
+    })
+    </script>
 </body>
 </html>
