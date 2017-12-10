@@ -420,7 +420,16 @@ h1,h2,h3,h4,h5,h6{font-size:14px;font-weight:400;font-family:'Playfair Display',
 a{text-decoration:none;-webkit-transition:all .4s;transition:all .2s}
 a:hover{color:#fff;text-decoration:none}
 a:focus{outline:none;text-decoration:none}
-img{width:100%}
+/* KALIU 20170916f: img auto scale */
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
 ul,li{margin:0;padding:0}
 fieldset{border:0 none;margin:0 auto;padding:0}
 .section-padding{padding:60px 0}
@@ -628,7 +637,8 @@ p#ContactForm1_contact-form-error-message{position:absolute;padding:1px 20px;bor
 p#ContactForm1_contact-form-error-message img,p#ContactForm1_contact-form-success-message img{width:12px;margin-top:-3px}
 form#contactForm{position:relative}
 p#ContactForm1_contact-form-success-message{position:absolute;padding:1px 20px;border-radius:4px;left:0;color:#64e233;text-transform:uppercase;width:100%}
-.contactFooter{background-color:#222222;padding:35px 0 30px;color:#fdfdfd}
+hKALIU {font-size:5%;margin:.0em 0}
+.contactFooter{background-color:#222222;padding:20px 0 0px;color:#fdfdfd}
 .footerLeft{font-size:14px;color:#777777;font-family:Open Sans;text-transform:capitalize;font-weight:100;text-align:center}
 .footerLeft a{color:rgb(255,255,255);font-weight:500;font-family:Open Sans}
 .home-link{display:none}
@@ -898,43 +908,93 @@ var _0x1305=["\x20","\x6A\x6F\x69\x6E","\x73\x6C\x69\x63\x65","\x73\x70\x6C\x69\
   <!-- END PRELOADER AREA -->
 
   <!-- HEADER DESIGN AREA -->
-  <header class='header-area' id='home'>
-    <div class='header-area-table'>
-      <div class='header-area-tablecell'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-12'>
-              <!-- HEADER TEXT DESIGN AREA -->
-              <div class='header-text'>
-                <h1>Hello,This is me!</h1>
-				<!-- Header Name -->
-                <h3>
-                  John Doe
-                </h3>
 
-                <h2 class='cd-headline clip is-full-width'>
-                  <span class='cd-words-wrapper'>
-				<!-- Headline -->
-                    <b class='is-visible'>Professional Web Designer</b>
-                    <b>Professional Web Developer</b>
-                    <b>Photography is my passion</b>
-                  </span>
-                </h2>
-				<!-- Top Links -->
-                <div class='social-link'>
-                  <a href='#'><i class='fa fa-facebook'/></a>
-                  <a href='#'><i class='fa fa-twitter'/></a>
-                  <a href='#'><i class='fa fa-instagram'/></a>
-                  <a href='#'><i class='fa fa-skype'/></a>
-                </div>
-              </div>
-              <!-- / END HEADER TEXT DESIGN AREA -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+ <!-- KALIU 20170917b: 加上banner-slider.slider.minimized: start --> 
+   <script type="text/javascript">
+ //<![CDATA[ 
+(function(g,j,c,f,d,k,i){/*! Jssor */
+new(function(){});var e={Y:function(a){return a},ze:function(a){return-a*(a-2)},Fd:function(a){return a*a*a}};var b=new function(){var h=this,zb=/\S+/g,H=1,bb=2,eb=3,db=4,hb=5,I,s=0,l=0,t=0,Z=0,B=0,K=navigator,mb=K.appName,o=K.userAgent,p=parseFloat;function Ib(){if(!I){I={tf:"ontouchstart"in g||"createTouch"in j};var a;if(K.pointerEnabled||(a=K.msPointerEnabled))I.zd=a?"msTouchAction":"touchAction"}return I}function w(h){if(!s){s=-1;if(mb=="Microsoft Internet Explorer"&&!!g.attachEvent&&!!g.ActiveXObject){var e=o.indexOf("MSIE");s=H;t=p(o.substring(e+5,o.indexOf(";",e)));/*@cc_on Z=@_jscript_version@*/;l=j.documentMode||t}else if(mb=="Netscape"&&!!g.addEventListener){var d=o.indexOf("Firefox"),b=o.indexOf("Safari"),f=o.indexOf("Chrome"),c=o.indexOf("AppleWebKit");if(d>=0){s=bb;l=p(o.substring(d+8))}else if(b>=0){var i=o.substring(0,b).lastIndexOf("/");s=f>=0?db:eb;l=p(o.substring(i+1,b))}else{var a=/Trident\/.*rv:([0-9]{1,}[\.0-9]{0,})/i.exec(o);if(a){s=H;l=t=p(a[1])}}if(c>=0)B=p(o.substring(c+12))}else{var a=/(opera)(?:.*version|)[ \/]([\w.]+)/i.exec(o);if(a){s=hb;l=p(a[2])}}}return h==s}function q(){return w(H)}function xb(){return q()&&(l<6||j.compatMode=="BackCompat")}function Ab(){return w(bb)}function cb(){return w(eb)}function gb(){return w(hb)}function tb(){return cb()&&B>534&&B<535}function L(){w();return B>537||l>42||s==H&&l>=11}function vb(){return q()&&l<9}function ub(a){var b,c;return function(f){if(!b){b=d;var e=a.substr(0,1).toUpperCase()+a.substr(1);n([a].concat(["WebKit","ms","Moz","O","webkit"]),function(g,d){var b=a;if(d)b=g+e;if(f.style[b]!=i)return c=b})}return c}}function sb(b){var a;return function(c){a=a||ub(b)(c)||b;return a}}var M=sb("transform");function lb(a){return{}.toString.call(a)}var ib={};n(["Boolean","Number","String","Function","Array","Date","RegExp","Object"],function(a){ib["[object "+a+"]"]=a.toLowerCase()});function n(b,d){var a,c;if(lb(b)=="[object Array]"){for(a=0;a<b.length;a++)if(c=d(b[a],a,b))return c}else for(a in b)if(c=d(b[a],a,b))return c}function E(a){return a==f?String(a):ib[lb(a)]||"object"}function jb(a){for(var b in a)return d}function C(a){try{return E(a)=="object"&&!a.nodeType&&a!=a.window&&(!a.constructor||{}.hasOwnProperty.call(a.constructor.prototype,"isPrototypeOf"))}catch(b){}}function v(a,b){return{x:a,y:b}}function pb(b,a){setTimeout(b,a||0)}function J(b,d,c){var a=!b||b=="inherit"?"":b;n(d,function(c){var b=c.exec(a);if(b){var d=a.substr(0,b.index),e=a.substr(b.index+b[0].length+1,a.length-1);a=d+e}});a&&(c+=(!a.indexOf(" ")?"":" ")+a);return c}function rb(b,a){if(l<9)b.style.filter=a}function Hb(a,b){if(a===i)a=b;return a}h.uf=Ib;h.Dd=q;h.Te=xb;h.Ue=Ab;h.Ve=cb;h.Ze=L;ub("transform");h.xd=function(){return l};h.wd=function(){return t||l};h.af=function(){w();return B};h.Rb=pb;h.bf=function(a,b){b.call(a);return D({},a)};function W(a){a.constructor===W.caller&&a.Yb&&a.Yb.apply(a,W.caller.arguments)}h.Yb=W;h.wb=function(a){if(h.cf(a))a=j.getElementById(a);return a};function u(a){return a||g.event}h.Ac=function(b){b=u(b);var a=b.target||b.srcElement||j;if(a.nodeType==3)a=h.sc(a);return a};h.pd=function(a){a=u(a);return{x:a.pageX||a.clientX||0,y:a.pageY||a.clientY||0}};function x(c,d,a){if(a!==i)c.style[d]=a==i?"":a;else{var b=c.currentStyle||c.style;a=b[d];if(a==""&&g.getComputedStyle){b=c.ownerDocument.defaultView.getComputedStyle(c,f);b&&(a=b.getPropertyValue(d)||b[d])}return a}}function Y(b,c,a,d){if(a===i){a=p(x(b,c));isNaN(a)&&(a=f);return a}if(a==f)a="";else d&&(a+="px");x(b,c,a)}function m(c,a){var d=a?Y:x,b;if(a&4)b=sb(c);return function(e,f){return d(e,b?b(e):c,f,a&2)}}function Cb(b){if(q()&&t<9){var a=/opacity=([^)]*)/.exec(b.style.filter||"");return a?p(a[1])/100:1}else return p(b.style.opacity||"1")}function Eb(b,a,f){if(q()&&t<9){var h=b.style.filter||"",i=new RegExp(/[\s]*alpha\([^\)]*\)/g),e=c.round(100*a),d="";if(e<100||f)d="alpha(opacity="+e+") ";var g=J(h,[i],d);rb(b,g)}else b.style.opacity=a==1?"":c.round(a*100)/100}var N={A:["rotate"],db:["rotateX"],cb:["rotateY"],Mb:["skewX"],Kb:["skewY"]};if(!L())N=D(N,{D:["scaleX",2],G:["scaleY",2],bb:["translateZ",1]});function O(d,a){var c="";if(a){if(q()&&l&&l<10){delete a.db;delete a.cb;delete a.bb}b.f(a,function(d,b){var a=N[b];if(a){var e=a[1]||0;if(P[b]!=d)c+=" "+a[0]+"("+d+(["deg","px",""])[e]+")"}});if(L()){if(a.qb||a.rb||a.bb!=i)c+=" translate3d("+(a.qb||0)+"px,"+(a.rb||0)+"px,"+(a.bb||0)+"px)";if(a.D==i)a.D=1;if(a.G==i)a.G=1;if(a.D!=1||a.G!=1)c+=" scale3d("+a.D+", "+a.G+", 1)"}}d.style[M(d)]=c}h.qf=m("transformOrigin",4);h.sf=m("backfaceVisibility",4);h.If=m("transformStyle",4);h.of=m("perspective",6);h.lf=m("perspectiveOrigin",4);h.kf=function(b,a){if(q()&&t<9||t<10&&xb())b.style.zoom=a==1?"":a;else{var c=M(b),f=a==1?"":"scale("+a+")",e=b.style[c],g=new RegExp(/[\s]*scale\(.*?\)/g),d=J(e,[g],f);b.style[c]=d}};h.c=function(a,d,b,c){a=h.wb(a);if(a.addEventListener){d=="mousewheel"&&a.addEventListener("DOMMouseScroll",b,c);a.addEventListener(d,b,c)}else if(a.attachEvent){a.attachEvent("on"+d,b);c&&a.setCapture&&a.setCapture()}};h.T=function(a,c,d,b){a=h.wb(a);if(a.removeEventListener){c=="mousewheel"&&a.removeEventListener("DOMMouseScroll",d,b);a.removeEventListener(c,d,b)}else if(a.detachEvent){a.detachEvent("on"+c,d);b&&a.releaseCapture&&a.releaseCapture()}};h.ec=function(a){a=u(a);a.preventDefault&&a.preventDefault();a.cancel=d;a.returnValue=k};h.ff=function(a){a=u(a);a.stopPropagation&&a.stopPropagation();a.cancelBubble=d};h.S=function(d,c){var a=[].slice.call(arguments,2),b=function(){var b=a.concat([].slice.call(arguments,0));return c.apply(d,b)};return b};h.cc=function(d,c){for(var b=[],a=d.firstChild;a;a=a.nextSibling)(c||a.nodeType==1)&&b.push(a);return b};function kb(a,c,e,b){b=b||"u";for(a=a?a.firstChild:f;a;a=a.nextSibling)if(a.nodeType==1){if(U(a,b)==c)return a;if(!e){var d=kb(a,c,e,b);if(d)return d}}}h.dc=kb;function T(a,d,g,b){b=b||"u";var c=[];for(a=a?a.firstChild:f;a;a=a.nextSibling)if(a.nodeType==1){U(a,b)==d&&c.push(a);if(!g){var e=T(a,d,g,b);if(e.length)c=c.concat(e)}}return c}function fb(a,c,d){for(a=a?a.firstChild:f;a;a=a.nextSibling)if(a.nodeType==1){if(a.tagName==c)return a;if(!d){var b=fb(a,c,d);if(b)return b}}}h.yf=fb;h.ke=function(b,a){return b.getElementsByTagName(a)};h.Bb=function(a,f,d){d=d||"u";var e;do{if(a.nodeType==1){var c=b.m(a,d);if(c&&c==Hb(f,c)){e=a;break}}a=b.sc(a)}while(a&&a!=j.body);return e};function D(){var e=arguments,d,c,b,a,g=1&e[0],f=1+g;d=e[f-1]||{};for(;f<e.length;f++)if(c=e[f])for(b in c){a=c[b];if(a!==i){a=c[b];var h=d[b];d[b]=g&&(C(h)||C(a))?D(g,{},h,a):a}}return d}h.C=D;function X(f,g){var d={},c,a,b;for(c in f){a=f[c];b=g[c];if(a!==b){var e;if(C(a)&&C(b)){a=X(a,b);e=!jb(a)}!e&&(d[c]=a)}}return d}h.Oc=function(a){return E(a)=="function"};h.cf=function(a){return E(a)=="string"};h.kd=function(a){return!isNaN(p(a))&&isFinite(a)};h.f=n;h.te=C;function R(a){return j.createElement(a)}h.zb=function(){return R("DIV")};h.Ic=function(){};function y(b,c,a){if(a==i)return b.getAttribute(c);b.setAttribute(c,a)}function U(a,b){return y(a,b)||y(a,"data-"+b)}h.E=y;h.m=U;h.Nb=function(d,b,c){var a=h.Uc(y(d,b));if(isNaN(a))a=c;return a};function z(b,a){return y(b,"class",a)||""}function ob(b){var a={};n(b,function(b){if(b!=i)a[b]=b});return a}function qb(b,a){return b.match(a||zb)}function Q(b,a){return ob(qb(b||"",a))}h.mf=ob;h.rf=qb;function ab(b,c){var a="";n(c,function(c){a&&(a+=b);a+=c});return a}function F(a,c,b){z(a,ab(" ",D(X(Q(z(a)),Q(c)),Q(b))))}h.sc=function(a){return a.parentNode};h.Q=function(a){h.ob(a,"none")};h.F=function(a,b){h.ob(a,b?"none":"")};h.jf=function(b,a){b.removeAttribute(a)};h.ef=function(){return q()&&l<10};h.df=function(d,a){if(a)d.style.clip="rect("+c.round(a.i||a.p||0)+"px "+c.round(a.k)+"px "+c.round(a.l)+"px "+c.round(a.g||a.q||0)+"px)";else if(a!==i){var g=d.style.cssText,f=[new RegExp(/[\s]*clip: rect\(.*?\)[;]?/i),new RegExp(/[\s]*cliptop: .*?[;]?/i),new RegExp(/[\s]*clipright: .*?[;]?/i),new RegExp(/[\s]*clipbottom: .*?[;]?/i),new RegExp(/[\s]*clipleft: .*?[;]?/i)],e=J(g,f,"");b.ad(d,e)}};h.ab=function(){return+new Date};h.I=function(b,a){b.appendChild(a)};h.vb=function(b,a,c){(c||a.parentNode).insertBefore(b,a)};h.Hc=function(b,a){a=a||b.parentNode;a&&a.removeChild(b)};h.Xe=function(a,b){n(a,function(a){h.Hc(a,b)})};h.Md=function(a){h.Xe(h.cc(a,d),a)};h.wc=function(a,b){var c=h.sc(a);b&1&&h.L(a,(h.o(c)-h.o(a))/2);b&2&&h.N(a,(h.n(c)-h.n(a))/2)};var S={i:f,k:f,l:f,g:f,u:f,v:f};h.vf=function(a){var b=h.zb();r(b,{Ec:"block",nb:h.K(a),i:0,g:0,u:0,v:0});var d=h.id(a,S);h.vb(b,a);h.I(b,a);var e=h.id(a,S),c={};n(d,function(b,a){if(b==e[a])c[a]=b});r(b,S);r(b,c);r(a,{i:0,g:0});return c};h.Uc=p;function V(d,c,b){var a=d.cloneNode(!c);!b&&h.jf(a,"id");return a}h.U=V;h.Ab=function(e,f){var a=new Image;function b(e,d){h.T(a,"load",b);h.T(a,"abort",c);h.T(a,"error",c);f&&f(a,d)}function c(a){b(a,d)}if(gb()&&l<11.6||!e)b(!e);else{h.c(a,"load",b);h.c(a,"abort",c);h.c(a,"error",c);a.src=e}};h.Pf=function(d,a,e){var c=d.length+1;function b(b){c--;if(a&&b&&b.src==a.src)a=b;!c&&e&&e(a)}n(d,function(a){h.Ab(a.src,b)});b()};h.Nf=function(a,g,i,h){if(h)a=V(a);var c=T(a,g);if(!c.length)c=b.ke(a,g);for(var f=c.length-1;f>-1;f--){var d=c[f],e=V(i);z(e,z(d));b.ad(e,d.style.cssText);b.vb(e,d);b.Hc(d)}return a};function Fb(a){var l=this,p="",r=["av","pv","ds","dn"],d=[],q,k=0,f=0,e=0;function g(){F(a,q,(d[e||f&2||f]||"")+" "+(d[k]||""));b.kb(a,"pointer-events",e?"none":"")}function c(){k=0;g();h.T(j,"mouseup",c);h.T(j,"touchend",c);h.T(j,"touchcancel",c)}function o(a){if(e)h.ec(a);else{k=4;g();h.c(j,"mouseup",c);h.c(j,"touchend",c);h.c(j,"touchcancel",c)}}l.Lf=function(a){if(a===i)return f;f=a&2||a&1;g()};l.Wb=function(a){if(a===i)return!e;e=a?0:3;g()};l.Z=a=h.wb(a);y(a,"data-jssor-button","1");var m=b.rf(z(a));if(m)p=m.shift();n(r,function(a){d.push(p+a)});q=ab(" ",d);d.unshift("");h.c(a,"mousedown",o);h.c(a,"touchstart",o)}h.Gc=function(a){return new Fb(a)};h.kb=x;h.xb=m("overflow");h.N=m("top",2);h.Hf=m("right",2);h.Ef=m("bottom",2);h.L=m("left",2);h.o=m("width",2);h.n=m("height",2);h.Df=m("marginLeft",2);h.Bf=m("marginTop",2);h.K=m("position");h.ob=m("display");h.H=m("zIndex",1);h.Fc=function(b,a,c){if(a!=i)Eb(b,a,c);else return Cb(b)};h.ad=function(a,b){if(b!=i)a.style.cssText=b;else return a.style.cssText};h.wf=function(b,a){if(a===i){a=x(b,"backgroundImage")||"";var c=/\burl\s*\(\s*["']?([^"'\r\n,]+)["']?\s*\)/gi.exec(a)||[];return c[1]}x(b,"backgroundImage",a?"url('"+a+"')":"")};var G;h.Se=G={s:h.Fc,i:h.N,k:h.Hf,l:h.Ef,g:h.L,u:h.o,v:h.n,nb:h.K,Ec:h.ob,O:h.H};h.id=function(c,b){var a={};n(b,function(d,b){if(G[b])a[b]=G[b](c)});return a};function r(g,l){var e=vb(),b=L(),d=tb(),j=M(g);function k(b,d,a){var e=b.ub(v(-d/2,-a/2)),f=b.ub(v(d/2,-a/2)),g=b.ub(v(d/2,a/2)),h=b.ub(v(-d/2,a/2));b.ub(v(300,300));return v(c.min(e.x,f.x,g.x,h.x)+d/2,c.min(e.y,f.y,g.y,h.y)+a/2)}function a(d,a){a=a||{};var n=a.bb||0,p=(a.db||0)%360,q=(a.cb||0)%360,u=(a.A||0)%360,l=a.D,m=a.G,f=a.Xf;if(l==i)l=1;if(m==i)m=1;if(f==i)f=1;if(e){n=0;p=0;q=0;f=0}var c=new Bb(a.qb,a.rb,n);c.db(p);c.cb(q);c.Qd(u);c.Re(a.Mb,a.Kb);c.Cb(l,m,f);if(b){c.mb(a.q,a.p);d.style[j]=c.Ud()}else if(!Z||Z<9){var o="",g={x:0,y:0};if(a.W)g=k(c,a.W,a.jb);h.Bf(d,g.y);h.Df(d,g.x);o=c.Vd();var s=d.style.filter,t=new RegExp(/[\s]*progid:DXImageTransform\.Microsoft\.Matrix\([^\)]*\)/g),r=J(s,[t],o);rb(d,r)}}r=function(e,c){c=c||{};var j=c.q,k=c.p,g;n(G,function(a,b){g=c[b];g!==i&&a(e,g)});h.df(e,c.a);if(!b){j!=i&&h.L(e,(c.Rc||0)+j);k!=i&&h.N(e,(c.Qc||0)+k)}if(c.ce)if(d)pb(h.S(f,O,e,c));else a(e,c)};h.Zb=O;if(d)h.Zb=r;if(e)h.Zb=a;else if(!b)a=O;h.B=r;r(g,l)}h.Zb=r;h.B=r;function Bb(j,k,o){var d=this,b=[1,0,0,0,0,1,0,0,0,0,1,0,j||0,k||0,o||0,1],i=c.sin,h=c.cos,l=c.tan;function g(a){return a*c.PI/180}function n(a,b){return{x:a,y:b}}function m(c,e,l,m,o,r,t,u,w,z,A,C,E,b,f,k,a,g,i,n,p,q,s,v,x,y,B,D,F,d,h,j){return[c*a+e*p+l*x+m*F,c*g+e*q+l*y+m*d,c*i+e*s+l*B+m*h,c*n+e*v+l*D+m*j,o*a+r*p+t*x+u*F,o*g+r*q+t*y+u*d,o*i+r*s+t*B+u*h,o*n+r*v+t*D+u*j,w*a+z*p+A*x+C*F,w*g+z*q+A*y+C*d,w*i+z*s+A*B+C*h,w*n+z*v+A*D+C*j,E*a+b*p+f*x+k*F,E*g+b*q+f*y+k*d,E*i+b*s+f*B+k*h,E*n+b*v+f*D+k*j]}function e(c,a){return m.apply(f,(a||b).concat(c))}d.Cb=function(a,c,d){if(a!=1||c!=1||d!=1)b=e([a,0,0,0,0,c,0,0,0,0,d,0,0,0,0,1])};d.mb=function(a,c,d){b[12]+=a||0;b[13]+=c||0;b[14]+=d||0};d.db=function(c){if(c){a=g(c);var d=h(a),f=i(a);b=e([1,0,0,0,0,d,f,0,0,-f,d,0,0,0,0,1])}};d.cb=function(c){if(c){a=g(c);var d=h(a),f=i(a);b=e([d,0,-f,0,0,1,0,0,f,0,d,0,0,0,0,1])}};d.Qd=function(c){if(c){a=g(c);var d=h(a),f=i(a);b=e([d,f,0,0,-f,d,0,0,0,0,1,0,0,0,0,1])}};d.Re=function(a,c){if(a||c){j=g(a);k=g(c);b=e([1,l(k),0,0,l(j),1,0,0,0,0,1,0,0,0,0,1])}};d.ub=function(c){var a=e(b,[1,0,0,0,0,1,0,0,0,0,1,0,c.x,c.y,0,1]);return n(a[12],a[13])};d.Ud=function(){return"matrix3d("+b.join(",")+")"};d.Vd=function(){return"progid:DXImageTransform.Microsoft.Matrix(M11="+b[0]+", M12="+b[4]+", M21="+b[1]+", M22="+b[5]+", SizingMethod='auto expand')"}}new function(){var a=this;function b(d,g){for(var j=d[0].length,i=d.length,h=g[0].length,f=[],c=0;c<i;c++)for(var k=f[c]=[],b=0;b<h;b++){for(var e=0,a=0;a<j;a++)e+=d[c][a]*g[a][b];k[b]=e}return f}a.D=function(b,c){return a.Nc(b,c,0)};a.G=function(b,c){return a.Nc(b,0,c)};a.Nc=function(a,c,d){return b(a,[[c,0],[0,d]])};a.ub=function(d,c){var a=b(d,[[c.x],[c.y]]);return v(a[0][0],a[1][0])}};var P={Rc:0,Qc:0,q:0,p:0,P:1,D:1,G:1,A:0,db:0,cb:0,qb:0,rb:0,bb:0,Mb:0,Kb:0};h.Kc=function(c,d){var a=c||{};if(c)if(b.Oc(c))a={gb:a};else if(b.Oc(c.a))a.a={gb:c.a};a.gb=a.gb||d;if(a.a)a.a.gb=a.a.gb||d;return a};h.Sc=function(n,j,s,t,B,C,o){var a=j;if(n){a={};for(var h in j){var D=C[h]||1,z=B[h]||[0,1],g=(s-z[0])/z[1];g=c.min(c.max(g,0),1);g=g*D;var x=c.floor(g);if(g!=x)g-=x;var k=t.gb||e.Y,m,E=n[h],p=j[h];if(b.kd(p)){k=t[h]||k;var A=k(g);m=E+p*A}else{m=b.C({Qb:{}},n[h]);var y=t[h]||{};b.f(p.Qb||p,function(d,a){k=y[a]||y.gb||k;var c=k(g),b=d*c;m.Qb[a]=b;m[a]+=b})}a[h]=m}var w=b.f(j,function(b,a){return P[a]!=i});w&&b.f(P,function(c,b){if(a[b]==i&&n[b]!==i)a[b]=n[b]});if(w){if(a.P)a.D=a.G=a.P;a.W=o.W;a.jb=o.jb;if(q()&&l>=11&&(j.q||j.p)&&s!=0&&s!=1)a.A=a.A||1e-8;a.ce=d}}if(j.a&&o.mb){var r=a.a.Qb,v=(r.i||0)+(r.l||0),u=(r.g||0)+(r.k||0);a.g=(a.g||0)+u;a.i=(a.i||0)+v;a.a.g-=u;a.a.k-=u;a.a.i-=v;a.a.l-=v}if(a.a&&b.ef()&&!a.a.i&&!a.a.g&&!a.a.p&&!a.a.q&&a.a.k==o.W&&a.a.l==o.jb)a.a=f;return a}};function o(){var a=this,d=[];function i(a,b){d.push({Dc:a,zc:b})}function h(a,c){b.f(d,function(b,e){b.Dc==a&&b.zc===c&&d.splice(e,1)})}a.Eb=a.addEventListener=i;a.removeEventListener=h;a.j=function(a){var c=[].slice.call(arguments,1);b.f(d,function(b){b.Dc==a&&b.zc.apply(g,c)})}}var l=function(A,E,h,J,M,L){A=A||0;var a=this,p,m,n,s,C=0,G,H,F,D,z=0,i=0,l=0,y,j,e,f,o,x,u=[],w;function O(a){e+=a;f+=a;j+=a;i+=a;l+=a;z+=a}function r(p){var g=p;if(o)if(!x&&(g>=f||g<e)||x&&g>=e)g=((g-e)%o+o)%o+e;if(!y||s||i!=g){var k=c.min(g,f);k=c.max(k,e);if(!y||s||k!=l){if(L){var m=(k-j)/(E||1);if(h.Yc)m=1-m;var n=b.Sc(M,L,m,G,F,H,h);if(w)b.f(n,function(b,a){w[a]&&w[a](J,b)});else b.B(J,n)}a.xc(l-j,k-j);var r=l,q=l=k;b.f(u,function(b,c){var a=!y&&x||g<=i?u[u.length-c-1]:b;a.M(l-z)});i=g;y=d;a.Pb(r,q)}}}function B(a,b,d){b&&a.Vb(f);if(!d){e=c.min(e,a.bd()+z);f=c.max(f,a.Bc()+z)}u.push(a)}var v=g.requestAnimationFrame||g.webkitRequestAnimationFrame||g.mozRequestAnimationFrame||g.msRequestAnimationFrame;if(b.Ve()&&b.xd()<7||!v)v=function(a){b.Rb(a,h.hb)};function I(){if(p){var d=b.ab(),e=c.min(d-C,h.jd),a=i+e*n;C=d;if(a*n>=m*n)a=m;r(a);if(!s&&a*n>=m*n)K(D);else v(I)}}function q(g,h,j){if(!p){p=d;s=j;D=h;g=c.max(g,e);g=c.min(g,f);m=g;n=m<i?-1:1;a.hd();C=b.ab();v(I)}}function K(b){if(p){s=p=D=k;a.gd();b&&b()}}a.fd=function(a,b,c){q(a?i+a:f,b,c)};a.ed=q;a.pb=K;a.Ee=function(a){q(a)};a.fb=function(){return i};a.dd=function(){return m};a.eb=function(){return l};a.M=r;a.mb=function(a){r(i+a)};a.Zc=function(){return p};a.Ae=function(a){o=a};a.Vb=O;a.Xc=function(a,b){B(a,0,b)};a.fc=function(a){B(a,1)};a.bd=function(){return e};a.Bc=function(){return f};a.Pb=a.hd=a.gd=a.xc=b.Ic;a.qc=b.ab();h=b.C({hb:16,jd:50},h);o=h.gc;x=h.we;w=h.ve;e=j=A;f=A+E;H=h.Jc||{};F=h.nc||{};G=b.Kc(h.J)};var m={Xb:"data-scale",oc:"data-scale-ratio",Fb:"data-autocenter"},n=new function(){var a=this;a.tb=function(c,a,e,d){(d||!b.E(c,a))&&b.E(c,a,e)};a.pc=function(a){var c=b.Nb(a,m.Fb);b.wc(a,c)}},q=new function(){var h=this;function g(b,a,c){c.push(a);b[a]=b[a]||[];b[a].push(c)}h.re=function(d){for(var e=[],a,b=0;b<d.V;b++)for(a=0;a<d.z;a++)g(e,c.ceil(1e5*c.random())%13,[b,a]);return e}},t=function(m,s,p,u,z,A){var a=this,v,h,g,y=0,x=u.ye,r,i=8;function t(a){if(a.i)a.p=a.i;if(a.g)a.q=a.g;b.f(a,function(a){b.te(a)&&t(a)})}function j(h,f,g){var a={hb:f,Jb:1,Rb:0,z:1,V:1,s:0,P:0,a:0,mb:k,bc:k,Yc:k,Be:q.re,cd:{Ce:0,Fe:0},J:e.Y,Jc:{},Ob:[],nc:{}};b.C(a,h);if(a.V==0)a.V=c.round(a.z*g);t(a);a.J=b.Kc(a.J,e.Y);a.Oe=c.ceil(a.Jb/a.hb);a.le=function(c,b){c/=a.z;b/=a.V;var f=c+"x"+b;if(!a.Ob[f]){a.Ob[f]={u:c,v:b};for(var d=0;d<a.z;d++)for(var e=0;e<a.V;e++)a.Ob[f][e+","+d]={i:e*b,k:d*c+c,l:e*b+b,g:d*c}}return a.Ob[f]};if(a.yc){a.yc=j(a.yc,f,g);a.bc=d}return a}function n(z,i,a,v,n,l){var y=this,t,u={},h={},m=[],f,e,r,p=a.cd.Ce||0,q=a.cd.Fe||0,g=a.le(n,l),o=B(a),C=o.length-1,s=a.Jb+a.Rb*C,w=v+s,j=a.bc,x;w+=50;function B(a){var b=a.Be(a);return a.Yc?b.reverse():b}y.Wc=w;y.Lb=function(d){d-=v;var e=d<s;if(e||x){x=e;if(!j)d=s-d;var f=c.ceil(d/a.hb);b.f(h,function(a,e){var d=c.max(f,a.Xd);d=c.min(d,a.length-1);if(a.Vc!=d){if(!a.Vc&&!j)b.F(m[e]);else d==a.ie&&j&&b.Q(m[e]);a.Vc=d;b.B(m[e],a[d])}})}};i=b.U(i);A(i,0,0);b.f(o,function(i,m){b.f(i,function(G){var I=G[0],H=G[1],v=I+","+H,o=k,s=k,x=k;if(p&&H%2){if(p&3)o=!o;if(p&12)s=!s;if(p&16)x=!x}if(q&&I%2){if(q&3)o=!o;if(q&12)s=!s;if(q&16)x=!x}a.i=a.i||a.a&4;a.l=a.l||a.a&8;a.g=a.g||a.a&1;a.k=a.k||a.a&2;var E=s?a.l:a.i,B=s?a.i:a.l,D=o?a.k:a.g,C=o?a.g:a.k;a.a=E||B||D||C;r={};e={p:0,q:0,s:1,u:n,v:l};f=b.C({},e);t=b.C({},g[v]);if(a.s)e.s=2-a.s;if(a.O){e.O=a.O;f.O=0}var K=a.z*a.V>1||a.a;if(a.P||a.A){var J=d;if(J){e.P=a.P?a.P-1:1;f.P=1;var N=a.A||0;e.A=N*360*(x?-1:1);f.A=0}}if(K){var i=t.Qb={};if(a.a){var w=a.Sf||1;if(E&&B){i.i=g.v/2*w;i.l=-i.i}else if(E)i.l=-g.v*w;else if(B)i.i=g.v*w;if(D&&C){i.g=g.u/2*w;i.k=-i.g}else if(D)i.k=-g.u*w;else if(C)i.g=g.u*w}r.a=t;f.a=g[v]}var L=o?1:-1,M=s?1:-1;if(a.x)e.q+=n*a.x*L;if(a.y)e.p+=l*a.y*M;b.f(e,function(a,c){if(b.kd(a))if(a!=f[c])r[c]=a-f[c]});u[v]=j?f:e;var F=a.Oe,A=c.round(m*a.Rb/a.hb);h[v]=new Array(A);h[v].Xd=A;h[v].ie=A+F-1;for(var z=0;z<=F;z++){var y=b.Sc(f,r,z/F,a.J,a.nc,a.Jc,{mb:a.mb,W:n,jb:l});y.O=y.O||1;h[v].push(y)}})});o.reverse();b.f(o,function(a){b.f(a,function(c){var f=c[0],e=c[1],d=f+","+e,a=i;if(e||f)a=b.U(i);b.B(a,u[d]);b.xb(a,"hidden");b.K(a,"absolute");z.he(a);m[d]=a;b.F(a,!j)})})}function w(){var a=this,b=0;l.call(a,0,v);a.Pb=function(c,a){if(a-b>i){b=a;g&&g.Lb(a);h&&h.Lb(a)}};a.Pc=r}a.Td=function(){var a=0,b=u.tc,d=b.length;if(x)a=y++%d;else a=c.floor(c.random()*d);b[a]&&(b[a].lb=a);return b[a]};a.Gf=function(x,y,k,l,b,t){a.ib();r=b;b=j(b,i,t);var f=l.Tc,e=k.Tc;f["no-image"]=!l.Tb;e["no-image"]=!k.Tb;var o=f,q=e,w=b,d=b.yc||j({},i,t);if(!b.bc){o=e;q=f}var u=d.Vb||0;h=new n(m,q,d,c.max(u-d.hb,0),s,p);g=new n(m,o,w,c.max(d.hb-u,0),s,p);h.Lb(0);g.Lb(0);v=c.max(h.Wc,g.Wc);a.lb=x};a.ib=function(){m.ib();h=f;g=f};a.Ye=function(){var a=f;if(g)a=new w;return a};if(z&&b.af()<537)i=16;o.call(a);l.call(a,-1e7,1e7)},p={uc:1};var u=function(a,e,i,y,x,w){var c=this;o.call(c);var j,h,g,l;b.o(a);b.n(a);var s,r;function q(a){c.j(p.uc,a,d)}function v(c){b.F(a,c);b.F(e,c)}function u(){s.Wb(i.ac||!j.Cf(h));r.Wb(i.ac||!j.Jf(h))}c.hc=function(c,a,b){h=a;!b&&u()};c.ic=v;var t;c.jc=function(){h=0;if(!t){b.c(a,"click",b.S(f,q,-l));b.c(e,"click",b.S(f,q,l));s=b.Gc(a);r=b.Gc(e);t=d}};c.Ub=g=b.C({Mf:1},i);l=g.Mf;j=w;if(g.Cb==k){n.tb(a,m.Xb,1);n.tb(e,m.Xb,1)}if(g.X){n.tb(a,m.Fb,g.X);n.tb(e,m.Fb,g.X)}n.pc(a);n.pc(e)},r=function(g,E){var r=this,x,B,u,a,A=[],z,y,e,l,q,t,s,j,v,i,w;o.call(r);g=b.wb(g);function D(m,g){var h=this,c,l,j;function n(){l.Lf(u==g)}function i(f){if(f||!v.Of()){var c=e-g%e,a=v.Od((g+c)/e-1),b=a*e+e-c;if(a<0)b+=x%e;if(a>=B)b-=x%e;r.j(p.uc,b,k,d)}}h.lb=g;h.Id=n;j=m.We||m.Tb||b.zb();h.Sb=c=b.Nf(w,"thumbnailtemplate",j,d);l=b.Gc(c);a.kc&1&&b.c(c,"click",b.S(f,i,0));a.kc&2&&b.c(c,"mouseenter",b.S(f,i,1))}r.hc=function(a,f,d){if(a!=u){var b=u;u=a;b!=-1&&A[b].Id();A[a].Id()}!d&&v.gf(v.Od(c.floor(a/e)))};r.ic=function(a){b.F(g,a)};var C;r.jc=function(F,G){if(!C){x=F;B=c.ceil(x/e);u=-1;var f=a.sb&1;j=j||c.ceil((z+l)/(t+l)*f+(y+q)/(s+q)*(1-f));j=c.min(j,B);var w=t+(t+l)*(e-1)*(1-f),p=s+(s+q)*(e-1)*f,n=w+(w+l)*(j-1)*f,m=p+(p+q)*(j-1)*(1-f);n=c.min(z,n);m=c.min(y,m);var E=(n-t-l)/2*f+(m-s-q)/2*(1-f);b.K(i,"absolute");b.xb(i,"hidden");b.o(i,n);b.n(i,m);b.wc(i,3);var o=[];b.f(G,function(k,g){var h=new D(k,g),d=h.Sb,a=c.floor(g/e),j=g%e;b.L(d,(t+l)*j*(1-f));b.N(d,(s+q)*j*f);if(!o[a]){o[a]=b.zb();b.I(i,o[a])}b.I(o[a],d);A.push(h)});var H=b.C({yb:0,Kd:k,pf:w,nf:p,td:l*f+q*(1-f),vd:12,Ed:200,ld:1,z:j,Ib:E,Ad:a.sb,Bd:a.Cd||a.Tf?0:a.sb},a);v=new h(g,H);r.Kf=v.Kf;C=d}};r.Ub=a=b.C({Lc:0,Mc:0,sb:1,kc:1},E);z=b.o(g);y=b.n(g);i=b.dc(g,"slides",d);w=b.dc(i,"prototype");t=b.o(w);s=b.n(w);b.Hc(w,i);e=a.V||1;l=a.Lc;q=a.Mc;j=a.z;a.Cb==k&&n.tb(g,m.Xb,1);a.X&=a.sb;a.X&&n.tb(g,m.Fb,a.X);n.pc(g)};function s(e,d,c){var a=this;l.call(a,0,c);a.rd=b.Ic;a.od=0;a.nd=c}var h=function(){var a=this;b.bf(a,o);var Mb="data-jssor-slider",Zb="data-jssor-thumb",v,n,U,nb,bb,xb,ab,T,L,K,Cb,Tb=1,lc=1,bc=1,cc={},x,V,Eb,Ib,Hb,Ab,zb,yb,jb,r=-1,Pb,q,I,M,sb,ub,vb,gb,G,S,Y,y,W,tb,eb=[],hc,jc,dc,Ub,Fc,u,kb,H,fc,rb,Nb,gc,cb,O=0,J=Number.MAX_VALUE,E=Number.MIN_VALUE,ic,C,lb,Q,N=1,Z,A,db,Qb=0,Rb=0,P,ob,pb,mb,w,hb,z,Gb,fb=[],Fb=b.uf(),qb=Fb.tf,B=[],D,R,F,Lb,Yb,X;function uc(e,k,o){var l=this,h={i:2,k:1,l:2,g:1},n={i:"top",k:"right",l:"bottom",g:"left"},g,a,f,i,j={};l.Z=e;l.Hb=function(q,p,t){var l,s=q,r=p;if(!f){f=b.vf(e);g=e.parentNode;i={Cb:b.Nb(e,m.Xb,1),X:b.Nb(e,m.Fb)};b.f(n,function(c,a){j[a]=b.Nb(e,"data-scale-"+c,1)});a=e;if(k){a=b.U(g,d);b.B(a,{i:0,g:0});b.I(a,e);b.I(g,a)}}if(o){l=c.max(q,p);if(k)if(t>0&&t<1){var v=c.min(q,p);l=c.min(l/v,1/(1-t))*v}}else s=r=l=c.pow(L<K?p:q,i.Cb);b.kf(a,l);b.E(a,m.oc,l);b.o(g,f.u*s);b.n(g,f.v*r);var u=b.Dd()&&b.wd()<9||b.wd()<10&&b.Te()?l:1,w=(s-u)*f.u/2,x=(r-u)*f.v/2;b.L(a,w);b.N(a,x);b.f(f,function(d,a){if(h[a]&&d){var e=(h[a]&1)*c.pow(q,j[a])*d+(h[a]&2)*c.pow(p,j[a])*d/2;b.Se[a](g,e)}});b.wc(g,i.X)}}function Ec(){var b=this;l.call(b,-1e8,2e8);b.Ff=function(){var a=b.eb();a=t(a);var d=c.round(a),g=d,f=a-c.floor(a),e=ac(a);return{lb:g,Af:d,nb:f,Ec:a,zf:e}};b.Pb=function(e,b){var g=t(b);if(c.abs(b-e)>1e-5){var f=c.floor(b);if(f!=b&&b>e&&(C&1||b>O))f++;kc(f,g,d)}a.j(h.xf,g,t(e),b,e)}}function Dc(){var a=this;l.call(a,0,0,{gc:q});b.f(B,function(b){C&1&&b.Ae(q);a.fc(b);b.Vb(cb/gb)})}function Cc(){var a=this,b=Gb.Z;l.call(a,-1,2,{J:e.Y,ve:{nb:pc},gc:q},b,{nb:1},{nb:-2});a.Sb=b}function vc(o,m){var b=this,e,g,i,j,c;l.call(b,-1e8,2e8,{jd:100});b.hd=function(){Z=d;db=f;a.j(h.hf,t(w.fb()),w.fb())};b.gd=function(){Z=k;j=k;var b=w.Ff();a.j(h.Qe,t(w.fb()),w.fb());if(!A){Gc(b.Af,r);(!b.nb||b.zf)&&kc(r,b.Ec)}};b.Pb=function(f,d){var a;if(j)a=c;else{a=g;if(i){var b=d/i;a=n.yd(b)*(g-e)+e}}w.M(a)};b.rc=function(a,d,c,f){e=a;g=d;i=c;w.M(a);b.M(0);b.ed(c,f)};b.Pd=function(a){j=d;c=a;b.fd(a,f,d)};b.Rd=function(a){c=a};w=new Ec;w.Xc(o);w.Xc(m)}function wc(){var c=this,a=nc();b.H(a,0);b.kb(a,"pointerEvents","none");c.Z=a;c.he=function(c){b.I(a,c);b.F(a)};c.ib=function(){b.Q(a);b.Md(a)}}function Bc(m,g){var e=this,s,J,v,j,y=[],x,A,S,E,P,L,F,i,w,p;l.call(e,-G,G+1,{});function K(a){s&&s.rd();R(m,a,0);L=d;s=new bb.R(m,bb,b.Uc(b.m(m,"idle"))||fc,!u);s.M(0)}function W(){s.qc<bb.qc&&K()}function N(p,r,o){if(!E){E=d;if(j&&o){var f=o.width,c=o.height,m=f,l=c;if(f&&c&&n.Db){if(n.Db&3&&(!(n.Db&4)||f>I||c>M)){var i=k,q=I/M*c/f;if(n.Db&1)i=q>1;else if(n.Db&2)i=q<1;m=i?f*M/c:I;l=i?M:c*I/f}b.o(j,m);b.n(j,l);b.N(j,(M-l)/2);b.L(j,(I-m)/2)}b.K(j,"absolute");a.j(h.Wd,g)}}b.Q(r);p&&p(e)}function U(f,b,c,d){if(d==db&&r==g&&u)if(!Fc){var a=t(f);D.Gf(a,g,b,e,c,M/I);b.be();hb.Vb(a-hb.bd()-1);hb.M(a);z.rc(a,a,0)}}function Y(b){if(b==db&&r==g){if(!i){var a=f;if(D)if(D.lb==g)a=D.Ye();else D.ib();W();i=new Ac(m,g,a,s);i.Ld(p)}!i.Zc()&&i.Cc()}}function C(a,d,k){if(a==g){if(a!=d)B[d]&&B[d].Jd();else!k&&i&&i.de();p&&p.Wb();var l=db=b.ab();e.Ab(b.S(f,Y,l))}else{var j=c.min(g,a),h=c.max(g,a),o=c.min(h-j,j+q-h),m=G+n.ge-1;(!P||o<=m)&&e.Ab()}}function Z(){if(r==g&&i){i.pb();p&&p.ae();p&&p.Yd();i.ud()}}function ab(){r==g&&i&&i.pb()}function X(b){!Q&&a.j(h.je,g,b)}function O(){p=w.pInstance;i&&i.Ld(p)}e.Ab=function(e,c){c=c||v;if(y.length&&!E){b.F(c);if(!S){S=d;a.j(h.fe,g);b.f(y,function(a){if(!b.E(a,"src")){a.src=b.m(a,"src2")||"";b.ob(a,a["display-origin"])}})}b.Pf(y,j,b.S(f,N,e,c))}else N(e,c)};e.ee=function(){if(q==1){e.Jd();C(g,g)}else if(D){var a=D.Td(q);if(a){var h=db=b.ab(),c=g+kb,d=B[t(c)];return d.Ab(b.S(f,U,c,d,a,h),v)}}else Bb(kb)};e.vc=function(){C(g,g,d)};e.Jd=function(){p&&p.ae();p&&p.Yd();e.sd();i&&i.Zd();i=f;K()};e.be=function(){b.Q(m)};e.sd=function(){b.F(m)};e.Sd=function(){p&&p.Wb()};function R(a,f,c,h){if(b.E(a,Mb))return;if(!L){if(a.tagName=="IMG"){y.push(a);if(!b.E(a,"src")){P=d;a["display-origin"]=b.ob(a);b.Q(a)}}var e=b.wf(a);if(e){var g=new Image;b.m(g,"src2",e);y.push(g)}c&&b.H(a,(b.H(a)||0)+1)}var i=b.cc(a);b.f(i,function(a){var e=a.tagName,g=b.m(a,"u");if(g=="player"&&!w){w=a;if(w.pInstance)O();else b.c(w,"dataavailable",O)}if(g=="caption"){if(f){b.qf(a,b.m(a,"to"));b.sf(a,b.m(a,"bf"));F&&b.m(a,"3d")&&b.If(a,"preserve-3d")}}else if(!L&&!c&&!j){if(e=="A"){if(b.m(a,"u")=="image")j=b.yf(a,"IMG");else j=b.dc(a,"image",d);if(j){x=a;b.ob(x,"block");b.B(x,jb);A=b.U(x,d);b.K(x,"relative");b.Fc(A,0);b.kb(A,"backgroundColor","#000")}}else if(e=="IMG"&&b.m(a,"u")=="image")j=a;if(j){j.border=0;b.B(j,jb)}}R(a,f,c+1,h)})}e.xc=function(c,b){var a=G-b;pc(J,a)};e.lb=g;o.call(e);F=b.m(m,"p");b.of(m,F);b.lf(m,b.m(m,"po"));var H=b.dc(m,"thumb",d);if(H){e.We=b.U(H);b.Q(H)}b.F(m);v=b.U(V);b.H(v,1e3);b.c(m,"click",X);K(d);e.Tb=j;e.Hd=A;e.Tc=m;e.Sb=J=m;b.I(J,v);a.Eb(203,C);a.Eb(28,ab);a.Eb(24,Z)}function Ac(z,g,p,q){var c=this,n=0,v=0,i,j,f,e,m,t,s,o=B[g];l.call(c,0,0);function w(){b.Md(R);Ub&&m&&o.Hd&&b.I(R,o.Hd);b.F(R,!m&&o.Tb)}function x(){c.Cc()}function y(a){s=a;c.pb();c.Cc()}c.Cc=function(){var b=c.eb();if(!A&&!Z&&!s&&r==g){if(!b){if(i&&!m){m=d;c.ud(d);a.j(h.Pe,g,n,v,i,e)}w()}var k,p=h.md;if(b!=e)if(b==f)k=e;else if(b==j)k=f;else if(!b)k=j;else k=c.dd();a.j(p,g,b,n,j,f,e);var l=u&&(!H||N);if(b==e)(f!=e&&!(H&12)||l)&&o.ee();else(l||b!=f)&&c.ed(k,x)}};c.de=function(){f==e&&f==c.eb()&&c.M(j)};c.Zd=function(){D&&D.lb==g&&D.ib();var b=c.eb();b<e&&a.j(h.md,g,-b-1,n,j,f,e)};c.ud=function(a){p&&b.xb(Y,a&&p.Pc.Uf?"":"hidden")};c.xc=function(c,b){if(m&&b>=i){m=k;w();o.sd();D.ib();a.j(h.Ne,g,n,v,i,e)}a.j(h.Me,g,b,n,j,f,e)};c.Ld=function(a){if(a&&!t){t=a;a.Eb($JssorPlayer$.se,y)}};p&&c.fc(p);i=c.Bc();c.fc(q);j=i+q.od;e=c.Bc();f=u?i+q.nd:e}function Ob(a,c,d){b.L(a,c);b.N(a,d)}function pc(c,b){var a=y>0?y:U,d=ub*b*(a&1),e=vb*b*(a>>1&1);Ob(c,d,e)}function Kb(a){if(!(C&1))a=c.min(J,c.max(a,E));return a}function ac(a){return!(C&1)&&(a-E<.0001||J-a<.0001)}function ec(){Lb=Z;Yb=z.dd();F=w.fb()}function Wb(){ec();if(A||!N&&H&12){z.pb();a.j(h.Le)}}function Vb(g){if(!A&&(N||!(H&12))&&!z.Zc()){var b=w.fb(),a=F,f=0;if(g&&c.abs(P)>=n.vd){a=b;f=pb}if(ac(b)){if(!g||Q)a=c.round(a)}else a=c.ceil(a);a=Kb(a+f);if(!(C&1)){if(J-a<.5)a=J;if(a-E<.5)a=E}var d=c.abs(a-b);if(d<1&&n.yd!=e.Y)d=1-c.pow(1-d,5);if(!Q&&Lb)z.Ee(Yb);else if(b==a){Pb.Sd();Pb.vc()}else z.rc(b,a,d*rb)}}function Xb(a){!b.Bb(b.Ac(a),"nodrag")&&b.ec(a)}function yc(a){oc(a,1)}function oc(c,g){var e=b.Ac(c);tb=k;var l=b.Bb(e,"1",Zb);if((!l||l===v)&&!W&&(!g||c.touches.length==1)){tb=b.Bb(e,"nodrag")||!lb||!zc();var n=b.Bb(e,i,m.oc);if(n)bc=b.E(n,m.oc);if(g){var p=c.touches[0];Qb=p.clientX;Rb=p.clientY}else{var o=b.pd(c);Qb=o.x;Rb=o.y}A=d;db=f;b.c(j,g?"touchmove":"mousemove",Db);b.ab();Q=0;Wb();if(!Lb)y=0;P=0;ob=0;pb=0;a.j(h.Ke,t(F),F,c)}}function Db(g){if(A){var a;if(g.type!="mousemove")if(g.touches.length==1){var o=g.touches[0];a={x:o.clientX,y:o.clientY}}else ib();else a=b.pd(g);if(a){var e=a.x-Qb,f=a.y-Rb;if(y||c.abs(e)>1.5||c.abs(f)>1.5){if(c.floor(F)!=F)y=y||U&W;if((e||f)&&!y){if(W==3)if(c.abs(f)>c.abs(e))y=2;else y=1;else y=W;if(qb&&y==1&&c.abs(f)>c.abs(e)*2.4)tb=d}var n=f,i=vb;if(y==1){n=e;i=ub}if(P-ob<-1.5)pb=0;else if(P-ob>1.5)pb=-1;ob=P;P=n;X=F-P/i/bc;if(!(C&1)){var l=0,j=[-F+O,0,F-q+S-O];b.f(j,function(b,d){if(b>0){var a=c.pow(b,1/1.6);a=c.tan(a*c.PI/2);l=(a-b)*(d-1)}});var h=l+X,m=k;j=[-h+O,0,h-q+S-O];b.f(j,function(a,b){if(a>0){a=c.min(a,i);a=c.atan(a)*2/c.PI;a=c.pow(a,1.6);X=a*(b-1)+O;if(b)X+=q-S;m=d}});if(!m)X=h}if(P&&y&&!tb){b.ec(g);if(!Z)z.Pd(X);else z.Rd(X)}}}}}function ib(){xc();if(A){Q=P;b.ab();b.T(j,"mousemove",Db);b.T(j,"touchmove",Db);Q&&u&8&&(u=0);z.pb();A=k;var c=w.fb();a.j(h.Je,t(c),c,t(F),F);H&12&&ec();Vb(d)}}function tc(c){var a=b.Ac(c),d=b.Bb(a,"1",Mb);if(v===d)if(Q){b.ff(c);while(a&&v!==a){(a.tagName=="A"||b.E(a,"data-jssor-button"))&&b.ec(c);a=a.parentNode}}else u&4&&(u=0)}function Hc(d){if(d!=r){var b=mb.eb(),a=Kb(d),e=c.round(t(a));if(b-a<.5)a=b;B[r];r=e;Pb=B[r];w.M(a)}}function Gc(b,c){y=0;Hc(b);if(u&2&&(kb>0&&r==q-1||kb<0&&!r))u=0;a.j(h.Ie,r,c)}function kc(a,d,e){if(!(C&1)){a=c.max(0,a);a=c.min(a,q-S+O);a=c.round(a)}a=t(a);b.f(eb,function(b){b.hc(a,d,e)})}function zc(){var b=h.qd||0,a=lb;h.qd|=a;return W=a&~b}function xc(){if(W){h.qd&=~lb;W=0}}function nc(){var a=b.zb();b.B(a,jb);b.K(a,"absolute");return a}function t(b,a){a=a||q||1;return(b%a+a)%a}function Jb(c,a,b){u&8&&(u=0);wb(c,rb,a,b)}function Sb(){b.f(eb,function(a){a.ic(a.Ub.Vf<=N)})}function rc(){if(!N){N=1;Sb();if(!A){H&12&&Vb();H&3&&B[r]&&B[r].vc()}}a.j(h.He)}function qc(){if(N){N=0;Sb();A||!(H&12)||Wb()}a.j(h.Ge)}function sc(){b.f(fb,function(a){b.B(a,jb);b.K(a,"absolute");b.xb(a,"hidden");b.Q(a)});b.B(V,jb)}function Bb(b,a){wb(b,a,d)}function wb(l,f,m,o){if(!A&&(N||!(H&12))||n.Kd){Z=d;A=k;z.pb();if(f==i)f=rb;var b=t(mb.eb()),e=l;if(m){e=b+l;e=c.round(e)}var a=e;if(!(C&1)){if(o)a=t(a);else if(C&2&&(a<0&&c.abs(b-E)<.0001||a>q-S&&c.abs(b-J)<.0001))a=a<0?J:E;a=Kb(a);if(J-a<.5)a=J;if(a-E<.5)a=E}var j=(a-b)%q;a=b+j;var g=b==a?0:f*c.abs(j),h=1;if(G>1)h=(U&1?zb:yb)/gb;g=c.min(g,f*h*1.5);z.rc(b,a,g||1)}}a.yb=function(a){if(a==i)return u;if(a!=u){u=a;u&&B[r]&&B[r].vc()}};a.Of=function(){return Q};a.W=function(){return L};a.jb=function(){return K};a.De=function(b){if(b==i)return Cb||L;a.Hb(b,b/L*K)};a.Hb=function(c,a,d){b.o(v,c);b.n(v,a);Tb=c/L;lc=a/K;b.f(cc,function(a){a.Hb(Tb,lc,d)});if(!Cb){b.vb(Y,x);b.N(Y,0);b.L(Y,0)}Cb=c};a.Cf=function(a){return c.abs(a-E)<.0001};a.Jf=function(a){return c.abs(a-J)<.0001};a.gf=wb;a.fd=function(){a.yb(u||1)};a.Od=function(a){a=t(a);if(C&1){var e=cb/gb,b=t(mb.eb()),d=t(a-b+e),f=t(c.abs(a-b));if(d>=G){if(f>q/2)if(a>b)a-=q;else a+=q}else if(a>b&&d<e)a-=q;else if(a<b&&d>e)a+=q}return a};a.Yb=function(r,l){a.Z=v=b.wb(r);L=b.o(v);K=b.n(v);n=b.C({Db:0,ge:1,Gb:1,lc:0,yb:0,ac:1,mc:d,Kd:d,ue:1,Nd:3e3,ld:1,Ed:500,yd:e.ze,vd:20,td:0,z:1,Ib:0,qe:1,Ad:1,Bd:1},l);n.mc=n.mc&&b.Ze();if(n.pe!=i)n.Nd=n.pe;if(n.oe!=i)n.Ib=n.oe;U=n.Ad&3;nb=n.xe;bb=b.C({R:s},n.Rf);xb=n.Qf;ab=n.ne;T=n.me;!n.qe;var w=b.cc(v);b.f(w,function(a,d){var c=b.m(a,"u");if(c=="loading")V=a;else{if(c=="slides")x=a;if(c=="navigator")Eb=a;if(c=="arrowleft")Ib=a;if(c=="arrowright")Hb=a;if(c=="thumbnavigator")Ab=a;if(a.tagName!="STYLE"&&a.tagName!="SCRIPT")cc[c||d]=new uc(a,c=="slides",b.mf(["slides","thumbnavigator"])[c])}});V=V||b.zb(j);zb=b.o(x);yb=b.n(x);I=n.pf||zb;M=n.nf||yb;jb={u:I,v:M,i:0,g:0};sb=n.td;ub=I+sb;vb=M+sb;gb=U&1?ub:vb;kb=n.ue;H=n.ld;fc=n.Nd;rb=n.Ed;Gb=new wc;if(n.mc&&(!b.Ue()||qb))Ob=function(a,c,d){b.Zb(a,{qb:c,rb:d})};u=n.yb&63;a.Ub=l;b.E(v,Mb,"1");b.H(x,b.H(x)||0);b.K(x,"absolute");Y=b.U(x,d);b.vb(Y,x);hb=new Cc;b.I(Y,hb.Sb);b.xb(x,"hidden");H&=qb?10:5;var y=b.cc(x);b.f(y,function(a){a.tagName=="DIV"&&!b.m(a,"u")&&fb.push(a);b.H(a,(b.H(a)||0)+1)});R=nc();b.kb(R,"backgroundColor","#000");b.Fc(R,0);b.H(R,0);b.vb(R,x.firstChild,x);q=fb.length;G=c.min(n.z,q);S=((U&1)*zb+(U&2)*yb/2+sb)/gb;ic=G<q;C=ic?n.ac:0;if(q){sc();cb=G>=q?0:n.Ib;if(nb){Ub=nb.Wf;Nb=nb.R;gc=!cb&&G==1&&q>1&&Nb&&(!b.Dd()||b.xd()>=9)}if(!(C&1)){O=cb/gb;E=O;J=E+q-S}lb=(G>1||cb?U:-1)&n.Bd;Fb.zd&&b.kb(x,Fb.zd,([f,"pan-y","pan-x","none"])[lb]||"");if(gc)D=new Nb(Gb,I,M,nb,qb,Ob);for(var h=0;h<fb.length;h++){var m=fb[h],o=new Bc(m,h);B.push(o)}b.Q(V);mb=new Dc;z=new vc(mb,hb);b.c(v,"click",tc,d);b.c(v,"mouseleave",rc);b.c(v,"mouseenter",qc);b.c(v,"mousedown",oc);b.c(v,"touchstart",yc);b.c(v,"dragstart",Xb);b.c(v,"selectstart",Xb);b.c(g,"mouseup",ib);b.c(j,"mouseup",ib);b.c(j,"touchend",ib);b.c(j,"touchcancel",ib);b.c(g,"blur",ib);if(Eb&&xb){hc=new xb.R(Eb,xb,L,K);eb.push(hc)}if(ab&&Ib&&Hb){ab.ac=C;jc=new ab.R(Ib,Hb,ab,L,K,a);eb.push(jc)}if(Ab&&T){T.lc=n.lc;T.Gb=T.Gb||0;dc=new T.R(Ab,T);!T.Cd&&b.E(Ab,Zb,"1");eb.push(dc)}b.f(eb,function(a){a.jc(q,B,V);a.Eb(p.uc,Jb)});b.kb(v,"visibility","visible");a.Hb(L,K);Sb();n.Gb&&b.c(j,"keydown",function(a){if(a.keyCode==37)Jb(-n.Gb,d);else a.keyCode==39&&Jb(n.Gb,d)});var k=n.lc;k=t(k);wb(k,0)}};b.Yb(a)};h.je=21;h.Ke=22;h.Je=23;h.hf=24;h.Qe=25;h.fe=26;h.Wd=27;h.Le=28;h.Ge=31;h.He=32;h.xf=202;h.Ie=203;h.Pe=206;h.Ne=207;h.Me=208;h.md=209;jssor_1_slider_init=function(){var i=[{Jb:1200,x:-.3,nc:{g:[.3,.7]},J:{g:e.Fd,s:e.Y},s:2},{Jb:1200,x:.3,bc:d,J:{g:e.Fd,s:e.Y},s:2}],j={yb:1,xe:{R:t,tc:i,ye:1},ne:{R:u},me:{R:r,z:1,sb:2,Ib:0,Cd:d}},f=new h("jssor_1",j),k=980;function a(){var d=f.Z.parentNode,b=d.clientWidth;if(b){var e=c.min(k||b,b);f.De(e)}else g.setTimeout(a,30)}a();b.c(g,"load",a);b.c(g,"resize",a);b.c(g,"orientationchange",a)}})(window,document,Math,null,true,false)
+//]]>
+</script>
+<style>
+.jssorl-009-spin img{animation-name:jssorl-009-spin;animation-duration:1.6s;animation-iteration-count:infinite;animation-timing-function:linear}@keyframes jssorl-009-spin{from{transform:rotate(0);}to{transform:rotate(360deg);}}.jssora061{display:block;position:absolute;cursor:pointer}.jssora061 .a{fill:none;stroke:#fff;stroke-width:360;stroke-linecap:round}.jssora061:hover{opacity:.8}.jssora061.jssora061dn{opacity:.5}.jssora061.jssora061ds{opacity:.3;pointer-events:none}
+</style>
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+<!-- Loading Screen -->
+<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+<!-- <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" /> -->
+</div>
+<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+<div>
+<img data-u="image" src="img/045.jpg" />
+<div u="thumb">Slide Description 001</div>
+</div>
+<div>
+<img data-u="image" src="img/043.jpg" />
+<div u="thumb">Slide Description 002</div>
+</div>
+<div>
+<img data-u="image" src="img/046.jpg" />
+<div u="thumb">Slide Description 003</div>
+</div>
+<div>
+<img data-u="image" src="img/047.jpg" />
+<div u="thumb">Slide Description 004</div>
+</div>
+<div>
+<img data-u="image" src="img/048.jpg" />
+<div u="thumb">Slide Description 005</div>
+</div>
+<div>
+<img data-u="image" src="img/044.jpg" />
+<div u="thumb">Slide Description 006</div>
+</div>
+<div>
+<img data-u="image" src="img/050.jpg" />
+<div u="thumb">Slide Description 007</div>
+</div>
+<div>
+<img data-u="image" src="img/049.jpg" />
+<div u="thumb">Slide Description 008</div>
+</div>
+<div>
+<img data-u="image" src="img/052.jpg" />
+<div u="thumb">Slide Description 009</div>
+</div>
+<div>
+<img data-u="image" src="img/051.jpg" />
+<div u="thumb">Slide Description 010</div>
+</div>
+<a data-u="any" href="https://www.jssor.com" style="display:none">bootstrap slider</a>
+</div>
+<!-- Thumbnail Navigator -->
+<div u="thumbnavigator" style="position:absolute;bottom:0px;left:0px;width:980px;height:50px;color:#FFF;overflow:hidden;cursor:default;background-color:rgba(0,0,0,.5);">
+<div u="slides">
+<div u="prototype" style="position:absolute;top:0;left:0;width:980px;height:50px;">
+<div u="thumbnailtemplate" style="position:absolute;top:0;left:0;width:100%;height:100%;font-family:verdana;font-weight:normal;line-height:50px;font-size:16px;padding-left:10px;box-sizing:border-box;"></div>
+</div>
+</div>
+</div>
+<!-- Arrow Navigator -->
+<div data-u="arrowleft" class="jssora061" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+<path class="a" d="M11949,1919L5964.9,7771.7c-127.9,125.5-127.9,329.1,0,454.9L11949,14079"></path>
+</svg>
+</div>
+<div data-u="arrowright" class="jssora061" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+<path class="a" d="M5869,1919l5984.1,5852.7c127.9,125.5,127.9,329.1,0,454.9L5869,14079"></path>
+</svg>
+</div>
+</div>
+<script type="text/javascript">jssor_1_slider_init();</script>
+<!-- #endregion Jssor Slider End -->
+<!-- KALIU 20170917b: 加上banner-slider.slider.minimized: End -->    
+  
+  
+  
+  
+  
   <!-- / END HEADER DESIGN AREA -->
   <!-- MENU DESIGN AREA -->
   <div class='menu-area'>
@@ -1047,246 +1107,14 @@ user is not using shrink to fit then we expand the header.
     </div>
   </div>
   <!-- / END MENU DESIGN AREA -->
-
-  <b:if cond='data:blog.pageType != &quot;item&quot;'>
-    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-      <!-- ABOUT ME DESIGN AREA -->
-      <section class='about-me-area section-padding' id='about'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-12 text-center'>
-              <div class='section-title'>
-                <h2>About me</h2>
-              </div>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-4'>
-              <div class='me-image'>
-                <figure class='effect-zoe'>
-					<!-- Avatar -->
-                  <img alt='' src='http://wordpressboss.com/tf/ethan-demo/assets/images/me.jpg'/>
-					<!-- About Social Links -->
-                  <figcaption>
-                    <p class='icon-links'>
-                      <a href='#'><span class='fa fa-facebook'/></a>
-                      <a href='#'><span class='fa fa-twitter'/></a>
-                      <a href='#'><span class='fa fa-google-plus'/></a>
-                      <a href='#'><span class='fa fa-instagram'/></a>
-                    </p>
-                  </figcaption>	
-                </figure>
-              </div>
-            </div>
-            <div class='col-md-8'>
-              <div class='about-me-text'>
-                <div class='profile-info'>
-                  <div class='profile-items clearfix'>
-                    <!-- About Preword --><div class='profile-preword'><span>Hello</span></div>
-                  </div>
-
-                  <!-- About Name --><h1 class='profile-title'><span>I&#39;m</span>John Doe</h1>
-
-                 <!-- About Position --><h2 class='profile-position'>Developer and Startup entrepreneur</h2></div>
-
-                <!-- About Bio --><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop.</p>
-				<!-- About Links -->
-                <div class='profile-btns'>
-                  <a class='about-button' href='http://www.templateclue.com'>Hire me</a>
-                  <a class='about-button' href='http://www.templateclue.com'>Download CV</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- / END ABOUT ME DESIGN AREA -->
-
-      <!-- EXPERIENCE -->
-      <section class='education experience' id='experience'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-12 text-center'>
-              <div class='section-title'>
-                <h2>experience</h2>
-              </div>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-12'>
-              <div class='row'>
-                <!-- SINGLE EXPERIENCE DESIGN AREA -->
-                <div class='col-sm-6'>
-                  <div class='single-education'>
-                    <i class='lnr lnr-briefcase'/>
-                    <h2>Front-End Development</h2>
-                    <h3 class='text-muted'>2012-2016</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                  </div>
-                </div>
-                <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
-                <!-- SINGLE EXPERIENCE DESIGN AREA -->
-                <div class='col-sm-6'>
-                  <div class='single-education'>
-                    <i class='lnr lnr-pencil'/>
-                    <h2>UI/UX Design</h2>
-                    <h3 class='text-muted'>2012-2016</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                  </div>
-                </div>
-                <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
-                <!-- SINGLE EXPERIENCE DESIGN AREA -->
-                <div class='col-sm-6'>
-                  <div class='single-education'>
-                    <i class='lnr lnr-laptop'/>
-                    <h2>Website production</h2>
-                    <h3 class='text-muted'>2012-2016</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                  </div>
-                </div>
-                <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
-                <!-- SINGLE EXPERIENCE DESIGN AREA -->
-                <div class='col-sm-6'>
-                  <div class='single-education'>
-                    <i class='lnr lnr-cog'/>
-                    <h2>Website maintain</h2>
-                    <h3 class='text-muted'>2012-2016</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                  </div>
-                </div>
-                <!-- / END SINGLE EXPERIENCE DESIGN AREA -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /EXPERIENCE -->
-
-      <!-- SERVICE -->
-      <section class='service-area' id='service'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-12 text-center'>
-              <div class='section-title'>
-                <h2>service</h2>
-              </div>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-12'>
-              <div class='row'>
-                <div class='col-md-4 intro-feature'>
-                  <div class='intro-icon'>
-                    <span class='icon lnr lnr-pointer-up'/>
-                  </div>
-                  <div class='intro-content'>
-                    <h5>Easily Customised</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class='col-md-4 intro-feature'>
-                  <div class='intro-icon'>
-                    <span class='icon lnr lnr-laptop'/>
-                  </div>
-                  <div class='intro-content'>
-                    <h5>MODERN DESIGN</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class='col-md-4 intro-feature'>
-                  <div class='intro-icon'>
-                    <span class='icon lnr lnr-users'/>
-                  </div>
-                  <div class='intro-content'>
-                    <h5>User Friendly</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class='col-md-4 intro-feature'>
-                  <div class='intro-icon'>
-                    <span class='icon lnr lnr-laptop-phone'/>
-                  </div>
-                  <div class='intro-content'>
-                    <h5>RESPONSIVE DEVELOPMENT</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class='col-md-4 intro-feature'>
-                  <div class='intro-icon'>
-                    <span class='icon lnr lnr-heart'/>
-                  </div>
-                  <div class='intro-content'>
-                    <h5>USER EXPERIENCE</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class='col-md-4 intro-feature'>
-                  <div class='intro-icon'>
-                    <span class='icon lnr lnr-diamond'/>
-                  </div>
-                  <div class='intro-content'>
-                    <h5>Lovely Design</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <!-- / END SINGLE SERVICE DESIGN AREA -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /SERVICE -->
-
-      <!-- COUNTER -->
-      <section class='section some_stats_section'>
-        <div class='container'>
-          <div class='row'>
-            <div class='items'>
-              <div class='col-md-3 col-sm-6 item'>
-                <i class='color lnr lnr-code'/>
-                <h1 class='counter_up'>3000</h1>
-                <div class='text'>LINES OF CODE</div>
-              </div>
-              <div class='col-md-3 col-sm-6 item'>
-                <i class='color lnr lnr-coffee-cup'/>
-                <h1 class='counter_up'>50</h1>
-                <div class='text'>COFFEE CUPS</div>
-              </div>
-              <div class='col-md-3 col-sm-6 item'>
-                <i class='color lnr lnr-book'/>
-                <h1 class='counter_up'>324</h1>
-                <div class='text'>BOOKS</div>
-              </div>
-              <div class='col-md-3 col-sm-6 item'>
-                <i class='color lnr lnr-gift'/>
-                <h1 class='counter_up'>1234</h1>
-                <div class='text'>GIFTS</div>
-              </div>
-              <div class='clear'/>
-            </div>
-            <div class='col-md-2'/>
-          </div>
-        </div>
-      </section>
-      <!-- /Some Stats Section -->
-    </b:if>
-  </b:if>
-
+  
+  <!-- KALIU: 刪除大約 263行 -->
+  
   <div class='clr'/>
 
   <div class='work section-padding' id='work'>
     <div class='container'>
-      <b:if cond='data:blog.pageType != &quot;item&quot;'>
-        <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-          <div class='row'>
-            <div class='col-md-12 text-center'>
-              <div class='section-title' style='margin-bottom: 50px;'>
-                <h2>Portfolio</h2>
-              </div>
-            </div>
-          </div>
-        </b:if>
-      </b:if>
+
       <div class='work-inner'>
         <!-- START SINGLE WORK DESIGN AREA -->
         <div class='outer-wrapper'>
@@ -2057,7 +1885,7 @@ user is not using shrink to fit then we expand the header.
                               </b:if>
                             </b:if>
                           </li>
-                          <li>by</li>
+                          <li>by2</li>
                           <li>
                             <b:if cond='data:top.showAuthor'>
                               <b:if cond='data:post.authorProfileUrl'>
@@ -2154,69 +1982,10 @@ user is not using shrink to fit then we expand the header.
                   </b:if>
   </div>
 
-                <b:if cond='data:blog.pageType == &quot;item&quot;'>
-					<!-- Author -->
-                  <div class='aisa-author'>
-                    <div class='aisa-author-info'>
-                      <div class='author-avatar'>
-                        <script type='text/javascript'>
-                          //<![CDATA[
-                          function av(a) {
-                            var b = a.entry.author[0];
-                            c = b.name.$t;
-                            d = b.gd$image.src.replace(/\/s[0-9]+(-*c*)\//, "/s107$1/");
-                            document.write('<img alt="' + c + '" src="' + d + '" title="' + c + '" avatar avatar-91 photo" height="91" width="91"/>')
-                          };
-                          //]]>
-                        </script>
-                        <a href='#'> <script expr:src='&quot;/feeds/posts/default/&quot; + data:post.id + &quot;?alt=json-in-script&amp;amp;callback=av&quot;'/> </a>
-                      </div>
-                      <div class='author-content'> <a class='author-name' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'>
-                        <data:post.author/>
-                        </a>
-						<!-- A_Bio -->
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                    </div>
-                    <ul class='social'>
-                      <li><a href='http://twitter.com' target='_blank'><i aria-hidden='true' class='fa fa-twitter'/></a>
-                      </li>
-                      <li><a href='http://facebook.com' target='_blank'><i aria-hidden='true' class='fa fa-facebook'/></a>
-                      </li>
-                      <li><a href='http://instagram.com' target='_blank'><i aria-hidden='true' class='fa fa-instagram'/></a>
-                      </li>
-                      <li><a href='http://pinterest.com' target='_blank'><i aria-hidden='true' class='fa fa-pinterest'/></a>
-                      </li>
-                      <li><a href='http://g-plus.com' target='_blank'><i aria-hidden='true' class='fa fa-google-plus'/></a>
-                      </li>
-                      <li><a href='http://youtube.com' target='_blank'><i aria-hidden='true' class='fa fa-youtube'/></a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class='related_pwidget content-inner'>
-                    <div class='Related_widget'>
-                      <h3 id='related-header'>Related Posts</h3>
-                      <div class='widget-related-post related-list right-img'>
-                        <b:loop values='data:post.labels' var='label'>
-                          <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels_thumbs&amp;max-results=6&quot;' type='text/javascript'/>							 
-                        </b:loop> 
-                        <script type='text/javascript'>
-                          var defaultnoimage=&quot;https://3.bp.blogspot.com/-sdC3BMaQLpc/Vz8vQNiYFmI/AAAAAAAAAIk/LBScLshApz0plSNTTeHoE6CKtWDLNTHIgCLcB/s1600/noImg.jpg&quot;;
-                          var maxresults=3; // Number Of Posts
-                          removeRelatedDuplicates_thumbs();
-                          printRelatedLabels_thumbs(&quot;<data:post.url/>&quot;);
-                        </script>
-                      </div>
-                      <!-- /.widget-related-post -->
-                    </div>
-                    <!-- /.widget -->
-                  </div>
-                  <span style=' background: #f7f7f7; height: 30px; display: block; margin: 0px -30px; '/>
-                </b:if>
-
-                 
-
+<!-- KALIU: 刪除 
+The moment
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+-->
                 </b:includable>
                 <b:includable id='post-404'>
                   <div class='post-404'>                        
@@ -2684,120 +2453,13 @@ user is not using shrink to fit then we expand the header.
       </div>
     </div>
   </div>
-  
-  <b:if cond='data:blog.pageType != &quot;item&quot;'>
-    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-      <!-- TESTIMONIAL -->
-      <section class='testimonial-area section-padding' id='testimonial'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-12 text-center'>
-              <div class='section-title'>
-                <h2>testimonial</h2>
-              </div>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-12'>
-              <div class='testimonial-list'>
-                <!-- SINGLE TESTIMONIAL DESIGN AREA -->
-                <div class='single-testimonial'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <h2>Larry Page</h2>
-                  <h3 class='text-muted'>CEO of Google</h3>
-                </div>
-                <!-- / END SINGLE TESTIMONIAL DESIGN AREA -->
-                <!-- SINGLE TESTIMONIAL DESIGN AREA -->
-                <div class='single-testimonial'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <h2>Steve Jobs</h2>
-                  <h3 class='text-muted'>CEO of apple</h3>
-                </div>
-                <!-- / END SINGLE TESTIMONIAL DESIGN AREA -->
-                <!-- SINGLE TESTIMONIAL DESIGN AREA -->
-                <div class='single-testimonial'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <h2>Mark Zuckerberg </h2>
-                  <h3 class='text-muted'>CEO of facebook</h3>
-                </div>
-                <!-- / END SINGLE TESTIMONIAL DESIGN AREA -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- / END TESTIMONIAL -->
-    </b:if>
-  </b:if>
-
+ 
+<!-- KALIU 20170916d: 刪除首頁跑馬 -->
+ 
   <section class='section nopaddingbottom' id='contact'>
-    <div class='container-fluid'>
-      <div class='row'>
-        <!-- CONTACT -->
-        <div class='col-md-6 contact_image'>
-          <div class='overlay'>
-            <div class='contact_info'>
-              <div class='item col-md-6 col-sm-6'>
-                <i class='fa fa-user'/>
-                <div>JOHN DOE</div>
-              </div>
-              <div class='item col-md-6 col-sm-6'>
-                <i class='fa fa-envelope'/>
-                <div><a href='mailto:john@site.com?Subject=Hello' target='_top'>john@site.com</a></div>
-              </div>
-              <div class='item col-md-6 col-sm-6'>
-                <i class='fa fa-mobile-phone'/>
-                <div>+123-456-789</div>
-              </div>
-              <div class='item col-md-6 col-sm-6'>
-                <i class='fa fa-map-marker'/>
-                <div>Melbourne, Australia</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /Contact Image -->
+<!-- KALIU 20170916c: 刪除右下寄email, 但是網頁還是有顯示 -->
 
-        <!-- Contact Body -->
-        <div class='col-md-6 contact_body'>
-          <h2>SEND ME A MESSAGE</h2>
-          <div class='contact_form'>
-            <b:section class='contact-form' id='contact-form' preferred='yes'>
-              <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' version='1' visible='true'>
-                <b:includable id='main'>
-                  <form id='contactForm' name='contact-form'>
-
-
-                    <input class='contact_name inputfield' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' placeholder='Name* :' required='' type='text'/>
-
-
-                    <input class='contact_email inputfield' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' placeholder='E-mail* :' required='' type='email'/>
-
-
-                    <textarea class='contact_message inputfield' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' placeholder='Message* :' required='' type='tel'/>
-
-
-                    <input class='submit contact_button button' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' style='visibility: visible;' type='submit'/>
-
-                    <div style='text-align: center; max-width: 222px; width: 100%'>
-                      <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
-                      <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
-                    </div>
-                  </form>
-                  <b:include name='quickedit'/>
-                </b:includable>
-              </b:widget>
-            </b:section>
-            <div class='messages'/>
-          </div>
-        </div>
-        <!-- /Contact Body -->
-
-      </div>
-    </div>
+<!-- KALIU 20170916: 保留卷到最上  -->
     <div class='scroll-to-up'>
       <div class='scrollup'>
         <i class='fa fa-angle-up'/>
@@ -2805,13 +2467,15 @@ user is not using shrink to fit then we expand the header.
     </div>
   </section>
 
+<!-- KALIU 20170916: 刪除Copyright後,blog會被導往templates網頁 -->
   <footer class='contactFooter'>
     <div class='container'>
       <!-- COPYRIGHT -->
-      <div class='col-md-12 col-sm-12 col-xs-12 footerLeft'>
+	  
+      <div class='col-md-12 col-sm-12 col-xs-12 footerLeft'><hKALIU>
         Copyright &#169; 2016 <data:blog.title/>. <a href='http://www.protemplateslab.com' rel='dofollow' target='_blank' title='Blogger Templates'>Blog Templates</a> - Design By <a  href='http://www.templateclue.com/' id='templateclue' ref='dofollow' title='Blogger Templates'>Templateclue</a> &amp; <a href='https://businesscardmockups.com/' rel='dofollow' target='_blank' title='Business Card Mockups'>Business Card</a>
-
-      </div>
+	
+      </hKALIU></div>
       <!-- SOCIAL ICONS -->
 
     </div>
