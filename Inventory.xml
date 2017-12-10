@@ -637,7 +637,7 @@ p#ContactForm1_contact-form-error-message{position:absolute;padding:1px 20px;bor
 p#ContactForm1_contact-form-error-message img,p#ContactForm1_contact-form-success-message img{width:12px;margin-top:-3px}
 form#contactForm{position:relative}
 p#ContactForm1_contact-form-success-message{position:absolute;padding:1px 20px;border-radius:4px;left:0;color:#64e233;text-transform:uppercase;width:100%}
-hKALIU {font-size:1%;margin:.0em 0}
+hKALIU {font-size:0.1%;margin:.0em 0}
 .contactFooter{background-color:#222222;padding:20px 0 0px;color:#fdfdfd}
 .footerLeft{font-size:14px;color:#777777;font-family:Open Sans;text-transform:capitalize;font-weight:100;text-align:center}
 .footerLeft a{color:rgb(255,255,255);font-weight:500;font-family:Open Sans}
@@ -2316,7 +2316,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
             </b:section>
 
           </div><!-- /main-wrapper -->
-
+		<!--KALIU mark: 這裡為sidebar -->
           <div class='sidebar-wrapper'>
             <b:section class='sidebar' id='sidebar' showaddelement='yes'>
               <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='1' visible='true'>
@@ -2411,19 +2411,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
                   </div>
                 </b:includable>
               </b:widget>
-              <b:widget id='HTML1' locked='false' title='Facebook' type='HTML' visible='true'>
-                <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
 
-  <b:include name='quickedit'/>
-</b:includable>
-              </b:widget>
+			  <!-- KALIU 20170920a: 刪除 Facebook  -->
+
             </b:section>
 
           </div><!-- /sidebar-wrapper -->
