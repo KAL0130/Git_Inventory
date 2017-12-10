@@ -584,7 +584,7 @@ iframe.viframe{opacity:.7;transition:.2s;height:275px;width:100%}
 .post{margin:20px 0 0;padding:0 3% 20px}
 .post-title.entry-title{margin:0;color:#222;font-size:26px;font-family:"Playfair Display",Arial,sans-serif;font-style:normal;text-align:center;font-weight:400}
 .post-title a{text-decoration:none;color:#000}
-.post-body{letter-spacing:.4px;font-family:"Open Sans",Arial,sans-serif;font-size:15px;font-style:normal;font-weight:400;line-height:26px;color:#666;word-wrap:break-word;word-break:break-word}
+.post-body{letter-spacing:.4px;font-family:"Open Sans",Arial,sans-serif;font-size:15px;font-style:normal;font-weight:400;line-height:26px;color:#000000;word-wrap:break-word;word-break:break-word}
 .loader{width:100%;position:relative;z-index:90;text-align:center;display:inline-block;margin:60px 0}
 .loadmore a{padding:5px 30px;display:inline-block;border-radius:60px;font-size:13px;color:#333;border:3px solid #333;font-weight:bold;text-transform:uppercase;font-family:Open Sans}
 .loadmore a i{margin-right:5px}
@@ -656,7 +656,7 @@ hKALIU {font-size:0.1%;margin:.0em 0}
 .popular-posts ul{padding:10px 0 0;margin:0}
 .popular-posts ul li{list-style:none outside none!important;margin:0;padding-bottom:5px!important;margin-bottom:10px;padding-top:0!important}
 .PopularPosts .item-title a{margin-top:-4px;color:inherit;font-size:14px;font-weight:400;line-height:1.77;display:block;letter-spacing:normal;margin-bottom:10px;font-family:Open Sans;text-transform:uppercase}
-.PopularPosts a{color:#666;font-size:.9rem;line-height:normal;text-decoration:none}
+.PopularPosts a{color:#000000;font-size:.9rem;line-height:normal;text-decoration:none}
 .PopularPosts a:hover{color:#222}
 .PopularPosts img{padding-right:0;height:80px;object-fit:cover;width:100%;border-radius:4px}
 .PopularPosts .item-thumbnail{width:95px;margin:0 10px 0 0;float:left}
@@ -826,6 +826,7 @@ a.about-button{margin-top:0}
 }
 ]]></b:skin>
 
+<!-- KAliu mark: 用if讓首頁沒有side bar -->
 <b:if cond='data:blog.pageType != &quot;item&quot;'>
 <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
 <style>
@@ -2428,7 +2429,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 <!-- KALIU 20170916d: 刪除首頁跑馬 -->
  
   <section class='section nopaddingbottom' id='contact'>
-<!-- KALIU 20170916c: 刪除右下寄email, 但是網頁還是有顯示 -->
+<!-- KALIU 20170916c: 刪除右下寄email -->
 
 <!-- KALIU 20170916: 保留卷到最上  -->
     <div class='scroll-to-up'>
