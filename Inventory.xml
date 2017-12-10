@@ -2,6 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
+
+
 	<!--KALIU:「Google Analytics (分析)」方法驗證 -->
 	<meta name="google-site-verification" content="wyQzhyMHrCZZwNsIRpsOSXnBwxvf8SSjPMxAtXuiNWY" />
   <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
@@ -19,11 +21,24 @@
     </b:if>
   </title>
 
+  	<!-- KALIU: Global site tag (gtag.js) - Google Analytics -->
+	<script async='async' src="https://www.googletagmanager.com/gtag/js?id=UA-109564763-1"></script>
+	<script> //<![CDATA[
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments)};
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109564763-1');
+	  //]]>
+	</script>
+  
+  
   <!-- Description and Keywords -->
   <b:if cond='data:blog.pageType == &quot;index&quot;'>
-    <meta content='YOUR DESCRIPTION HERE' name='description'/>
+	<!--KALIU: 加入meta content以利google search -->
+    <meta content='國外自助旅行的網誌。提供許多有用的旅行資訊。' name='description'/>
   </b:if>
-  <meta content='YOUR KEYWORDS HERE' name='keywords'/>
+  <meta content='自助旅行, 國外, 租車, 訂房' name='keywords'/>
   <b:if cond='data:blog.pageType == &quot;item&quot;'>
     <meta expr:content='data:blog.pageName' property='og:title'/>
     <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
