@@ -637,7 +637,7 @@ p#ContactForm1_contact-form-error-message{position:absolute;padding:1px 20px;bor
 p#ContactForm1_contact-form-error-message img,p#ContactForm1_contact-form-success-message img{width:12px;margin-top:-3px}
 form#contactForm{position:relative}
 p#ContactForm1_contact-form-success-message{position:absolute;padding:1px 20px;border-radius:4px;left:0;color:#64e233;text-transform:uppercase;width:100%}
-hKALIU {font-size:5%;margin:.0em 0}
+hKALIU {font-size:1%;margin:.0em 0}
 .contactFooter{background-color:#222222;padding:20px 0 0px;color:#fdfdfd}
 .footerLeft{font-size:14px;color:#777777;font-family:Open Sans;text-transform:capitalize;font-weight:100;text-align:center}
 .footerLeft a{color:rgb(255,255,255);font-weight:500;font-family:Open Sans}
@@ -919,52 +919,33 @@ new(function(){});var e={Y:function(a){return a},ze:function(a){return-a*(a-2)},
 <style>
 .jssorl-009-spin img{animation-name:jssorl-009-spin;animation-duration:1.6s;animation-iteration-count:infinite;animation-timing-function:linear}@keyframes jssorl-009-spin{from{transform:rotate(0);}to{transform:rotate(360deg);}}.jssora061{display:block;position:absolute;cursor:pointer}.jssora061 .a{fill:none;stroke:#fff;stroke-width:360;stroke-linecap:round}.jssora061:hover{opacity:.8}.jssora061.jssora061dn{opacity:.5}.jssora061.jssora061ds{opacity:.3;pointer-events:none}
 </style>
-<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1550px;height:380px;overflow:hidden;visibility:hidden;">
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1550px;height:500px;overflow:hidden;visibility:hidden;">
 <!-- Loading Screen -->
 <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
 <!-- <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" /> -->
 </div>
-<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1550px;height:380px;overflow:hidden;">
+<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1550px;height:500px;overflow:hidden;">
 <div>
-<img data-u="image" src="https://1.bp.blogspot.com/-8lXb4HJhU24/WbZNKacL-bI/AAAAAAAATkc/NMjKltwBnBkWK9tM-RdwFi2L4ax9coefACLcBGAs/s640/01.JPG" />
-<div u="thumb">Slide Description 001</div>
+<img data-u="image" src="https://4.bp.blogspot.com/-NNLTbHAI1Y0/Wb_fjZfNf3I/AAAAAAAAAE0/rLvMz4Rqp_wkvKF1NBfvmNsIB5lwQsVogCK4BGAYYCw/s1600/01_DSC00174_2.JPG" />
+<div u="thumb">冰島</div>
 </div>
 <div>
-<img data-u="image" src="https://1.bp.blogspot.com/-8lXb4HJhU24/WbZNKacL-bI/AAAAAAAATkc/NMjKltwBnBkWK9tM-RdwFi2L4ax9coefACLcBGAs/s640/01.JPG" />
-<div u="thumb">Slide Description 002</div>
+<img data-u="image" src="https://1.bp.blogspot.com/-yDJ1_n5ReMY/Wb_fjMIzbUI/AAAAAAAAAEs/30QBHmke6VUoZKASZU9dd99GQr2thmjZgCK4BGAYYCw/s1600/lodon_eye.JPG" />
+<div u="thumb">倫敦眼</div>
 </div>
 <div>
-<img data-u="image" src="https://1.bp.blogspot.com/-8lXb4HJhU24/WbZNKacL-bI/AAAAAAAATkc/NMjKltwBnBkWK9tM-RdwFi2L4ax9coefACLcBGAs/s640/01.JPG" />
-<div u="thumb">Slide Description 003</div>
+<img data-u="image" src="https://1.bp.blogspot.com/-dw8lt6WXaxs/Wb_fibD2iuI/AAAAAAAAAEk/1-Uny_Cbn0EiK26aiLl-RScJLnKvcOikgCK4BGAYYCw/s1600/hawaii.JPG" />
+<div u="thumb">夏威夷</div>
 </div>
 <div>
-<img data-u="image" src="img/047.jpg" />
-<div u="thumb">Slide Description 004</div>
+<img data-u="image" src="https://1.bp.blogspot.com/-UNHwMpiwTlo/Wb_fjvqJejI/AAAAAAAAAE8/iRWK5jNLu4Eief3PKdmEDrbRar_kMcQUwCK4BGAYYCw/s1600/Russia.JPG" />
+<div u="thumb">俄羅斯</div>
 </div>
 <div>
-<img data-u="image" src="img/048.jpg" />
-<div u="thumb">Slide Description 005</div>
+<img data-u="image" src="https://4.bp.blogspot.com/-_KIAgbH8qio/Wb_fkCwOTSI/AAAAAAAAAFE/2wcKIUNSEkoflijKn2wmxmsAUzopP17xACK4BGAYYCw/s1600/Korea.JPG" />
+<div u="thumb">南韓</div>
 </div>
-<div>
-<img data-u="image" src="img/044.jpg" />
-<div u="thumb">Slide Description 006</div>
-</div>
-<div>
-<img data-u="image" src="img/050.jpg" />
-<div u="thumb">Slide Description 007</div>
-</div>
-<div>
-<img data-u="image" src="img/049.jpg" />
-<div u="thumb">Slide Description 008</div>
-</div>
-<div>
-<img data-u="image" src="img/052.jpg" />
-<div u="thumb">Slide Description 009</div>
-</div>
-<div>
-<img data-u="image" src="img/051.jpg" />
-<div u="thumb">Slide Description 010</div>
-</div>
+
 <a data-u="any" href="https://www.jssor.com" style="display:none">bootstrap slider</a>
 </div>
 <!-- Thumbnail Navigator -->
@@ -1885,7 +1866,7 @@ user is not using shrink to fit then we expand the header.
                               </b:if>
                             </b:if>
                           </li>
-                          <li>by2</li>
+                    <!--kaliu 20170918:刪除作者 "By"      <li>by</li> -->
                           <li>
                             <b:if cond='data:top.showAuthor'>
                               <b:if cond='data:post.authorProfileUrl'>
