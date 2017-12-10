@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-
+	<!--KALIU:「Google Analytics (分析)」方法驗證 -->
+	<meta name="google-site-verification" content="wyQzhyMHrCZZwNsIRpsOSXnBwxvf8SSjPMxAtXuiNWY" />
   <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
   <b:include data='blog' name='all-head-content'/>
 
@@ -1074,13 +1075,10 @@ user is not using shrink to fit then we expand the header.
               <div class='navbar-collapse collapse'>
                 <ul class='nav navbar-nav'>
 				 <!-- Top Nav -->
-                  <li class='active'><a class='smoth-scroll' href='#home'>Home <div class='ripple-wrapper'/></a></li>
-                  <li><a class='smoth-scroll' href='/#about'>About me</a></li>
-                  <li><a class='smoth-scroll' href='/#experience'>experience</a></li>
-                  <li><a class='smoth-scroll' href='/#service'>Service</a></li>
-                  <li><a class='smoth-scroll' href='/#work'>Portfolio</a></li>
-                  <li><a class='smoth-scroll' href='/#testimonial'>Testimonial</a></li>
-                  <li><a class='smoth-scroll' href='/#contact'>Contact</a></li>
+                  <li class='active'><a class='smoth-scroll' href='/'>Home <div class='ripple-wrapper'/></a></li>
+                  <li><a class='smoth-scroll' href='/search/label/2017_俄羅斯Russia'>俄羅斯</a></li>
+                  <li><a class='smoth-scroll' href='/search/label/2017_芬蘭Finland'>芬蘭</a></li>
+                  <li><a class='smoth-scroll' href='/#contact'>About us</a></li>
                 </ul>
               </div>
             </div>
