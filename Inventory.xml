@@ -2427,7 +2427,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
   </div>
  
 <!-- KALIU 20170916d: 刪除首頁跑馬 -->
- 
+<!-- KALIU 20170924a: 加showaddelement -->
+ <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
   <section class='section nopaddingbottom' id='contact'>
 <!-- KALIU 20170916c: 刪除右下寄email -->
 
